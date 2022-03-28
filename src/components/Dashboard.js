@@ -25,6 +25,15 @@ export default function Dashboard() {
         <TableIndicator>Maximalmenge:</TableIndicator>
         <TableValue>21.000.000.000 RTM</TableValue>
       </DashboardTableContainer>
+      <NewsTitle>News</NewsTitle>
+      <NewsArticle>
+        <NewsArticleHeadline>2 Millionen Wallets</NewsArticleHeadline>
+        <NewsArticleText>
+          Es existieren mittlerweile zwei Millionen Wallets, die Raptoreum-Coins
+          aufbewahren: ein rasanter Anstieg der Nutzer seit Verfügbarkeitsbeginn
+          des Coins vor 18 Monaten.
+        </NewsArticleText>
+      </NewsArticle>
     </MainDashboard>
   );
 }
@@ -56,7 +65,7 @@ const DashboardGraphDummy = styled.img`
   width: 300px;
 `;
 
-const DashboardTableContainer = styled.div`
+const DashboardTableContainer = styled.section`
   display: grid;
   grid-template-areas:
     'TableIndicator' 'TableValue'
@@ -74,4 +83,26 @@ const TableIndicator = styled.span``;
 
 const TableValue = styled.span`
   color: #3ac5e8;
+`;
+
+const NewsTitle = styled.h2`
+  font-size: 115%;
+  margin: 0;
+  margin: 20px 0 0 20px;
+`;
+
+const NewsArticle = styled.article`
+  padding: 0 30px;
+`;
+
+const NewsArticleHeadline = styled.h3`
+  font-size: 80%;
+  margin: 0;
+  padding: 0;
+  margin-top: 10px;
+  color: #3ac5e8;
+`;
+
+const NewsArticleText = styled.p`
+  font-size: 80%;
 `;
