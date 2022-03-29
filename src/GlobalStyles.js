@@ -10,6 +10,8 @@ export default createGlobalStyle`
     font-size: 112.5%;
     padding: 0;
     margin: 0;
+    background-color: #121212;
+    color: #dcdcdc;
   }
 
   input, label, button, textarea {
