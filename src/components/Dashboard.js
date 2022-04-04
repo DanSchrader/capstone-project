@@ -1,44 +1,83 @@
+import { useEffect, useState } from 'react';
+import Axios from 'axios';
+import HistoryChart from './HistoryChart';
 import styled from 'styled-components';
-import dummy from '../images/capstone-graph-dummy.svg';
+import formatChartData from '../utils/formatChartData';
 
 export default function Dashboard() {
+  const [coin, setCoin] = useState();
+  const [historyData, setHistoryData] = useState();
+
+  const formatFetchData = (data) => {
+    return data.map((element) => {
+      return {
+        time: element[0],
+        price: element[1],
+      };
+    });
+  };
+
+  useEffect(() => {
+    const fetchHistoricalData = async () => {
+      let historicalDataArray = [];
+      await Axios.get(
+        'https://api.coingecko.com/api/v3/coins/raptoreum/market_chart?vs_currency=eur&days=27&interval=daily'
+      ).then((response) => {
+        historicalDataArray = response.data.prices;
+      });
+      let formattedData = formatFetchData(historicalDataArray);
+      console.log('formattedData', formattedData);
+      let formattedHistoryData = formatChartData(formattedData);
+      setHistoryData(formattedHistoryData);
+    };
+
+    fetchHistoricalData();
+  }, []);
+
+  useEffect(() => {
+    const fetchCurrentData = async () => {
+      let currentDataArray = [];
+      await Axios.get(
+        'https://api.coingecko.com/api/v3/coins/raptoreum?localization=de&tickers=false&market_data=true&developer_data=false&sparkline=false'
+      ).then((response) => {
+        currentDataArray = response.data;
+      });
+      setCoin(currentDataArray);
+    };
+
+    fetchCurrentData();
+  }, []);
+  console.log('coin', coin);
+  console.log('historyData', historyData);
+
   return (
     <MainDashboard>
       <DashboardTitle>Dashboard</DashboardTitle>
-      <CurrencySelector>
-        <option>Raptoreum</option>
-        <option>Bitcoin</option>
-        <option>Ethereum</option>
-        <option>Matic</option>
-        <option>Cardano</option>
-      </CurrencySelector>
-      <DashboardGraph>
-        <DashboardGraphDummy src={dummy} alt="Value-Graph" />
-      </DashboardGraph>
-      <DashboardTableContainer>
-        <TableIndicator>Preis:</TableIndicator>
-        <TableValue>0,01 USD</TableValue>
-        <TableIndicator>Marktkapazität:</TableIndicator>
-        <TableValue>13.722.000 USD</TableValue>
-        <TableIndicator>24h-Volumen:</TableIndicator>
-        <TableValue>68.868 USD</TableValue>
-        <TableIndicator>Maximalmenge:</TableIndicator>
-        <TableValue>21.000.000.000 RTM</TableValue>
-      </DashboardTableContainer>
-      <NewsTitle>News</NewsTitle>
-      <NewsArticle>
-        <NewsArticleHeadline>2 Millionen Wallets</NewsArticleHeadline>
-        <NewsArticleText>
-          Es existieren mittlerweile zwei Millionen Wallets, die Raptoreum-Coins
-          aufbewahren: ein rasanter Anstieg der Nutzer seit Verfügbarkeitsbeginn
-          des Coins vor 18 Monaten.
-        </NewsArticleText>
-      </NewsArticle>
+      {coin ? <CoinName>{coin.name}</CoinName> : <div>Loading...</div>}
+      {historyData ? (
+        <HistoryChart historyData={historyData} />
+      ) : (
+        <div>Loading...</div>
+      )}
+      {coin ? (
+        <DashboardTableContainer>
+          <TableIndicator>Preis:</TableIndicator>
+          <TableValue>{coin.market_data.current_price.eur} EUR</TableValue>
+          <TableIndicator>Marktkapazität:</TableIndicator>
+          <TableValue>{coin.market_data.market_cap.eur} EUR</TableValue>
+          <TableIndicator>Rang (Marktkap.):</TableIndicator>
+          <TableValue>{coin.market_data.market_cap_rank}</TableValue>
+          <TableIndicator>Maximalmenge:</TableIndicator>
+          <TableValue>{coin.market_data.max_supply} RTM</TableValue>
+        </DashboardTableContainer>
+      ) : (
+        <div>Loading...</div>
+      )}
     </MainDashboard>
   );
 }
 
-const MainDashboard = styled.main`
+const MainDashboard = styled.section`
   padding: 10px;
   display: grid;
   gap: 10px;
@@ -48,21 +87,14 @@ const DashboardTitle = styled.h2`
   font-size: 115%;
   margin: 0;
   margin-left: 20px;
+  color: #3ac5e8;
 `;
 
-const DashboardGraph = styled.section`
-  display: grid;
-  align-items: center;
-  justify-items: center;
-`;
-
-const CurrencySelector = styled.select`
-  width: 25vw;
-  justify-self: center;
-`;
-
-const DashboardGraphDummy = styled.img`
-  width: 300px;
+const CoinName = styled.h3`
+  font-size: 80%;
+  margin: 0;
+  margin-top: 10px;
+  margin-left: 40px;
 `;
 
 const DashboardTableContainer = styled.section`
@@ -74,35 +106,22 @@ const DashboardTableContainer = styled.section`
     'TableIndicator' 'TableValue';
   grid-template-rows: 1fr 1fr 1fr 1fr;
   grid-template-columns: 1fr 1fr;
-  padding: 0 80px;
+  margin: 0;
+  padding: 0 50px;
+  gap: 5px;
+`;
+
+const TableIndicator = styled.span`
+  margin: 0;
+  padding: 0;
   font-size: 80%;
   font-weight: 300;
 `;
 
-const TableIndicator = styled.span``;
-
 const TableValue = styled.span`
   color: #3ac5e8;
-`;
-
-const NewsTitle = styled.h2`
-  font-size: 115%;
-  margin: 0;
-  margin: 20px 0 0 20px;
-`;
-
-const NewsArticle = styled.article`
-  padding: 0 30px;
-`;
-
-const NewsArticleHeadline = styled.h3`
-  font-size: 80%;
   margin: 0;
   padding: 0;
-  margin-top: 10px;
-  color: #3ac5e8;
-`;
-
-const NewsArticleText = styled.p`
   font-size: 80%;
+  font-weight: 300;
 `;

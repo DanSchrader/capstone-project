@@ -8,7 +8,7 @@ export default function Header() {
         <RaptoreumLogoImage src={logo} alt="Raptoreum-Logo" />
       </RaptoreumLogoContainer>
       <RaptoreumDecryptdedContainer>
-        <RaptoreumDecryptedText>Raptoreum Decrypted</RaptoreumDecryptedText>
+        <RaptoreumDecryptedText>raptoreum.de.crypted</RaptoreumDecryptedText>
       </RaptoreumDecryptdedContainer>
     </AppHeader>
   );
