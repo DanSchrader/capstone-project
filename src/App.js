@@ -12,6 +12,5 @@ export default function App() {
 }
 
 const AppContainer = styled.div`
-  background-color: #121212;
-  color: #dcdcdc;
+  max-width: 400px;
 `;

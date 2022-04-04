@@ -12,6 +12,8 @@ export default createGlobalStyle`
     margin: 0;
     background-color: #121212;
     color: #dcdcdc;
+    display: grid;
+    justify-content: center;
   }
 
   input, label, button, textarea {
