@@ -16,7 +16,7 @@ const HeadlineWrapper = styled.div`
   display: grid;
   grid-template-columns: 30px 1fr;
   gap: 10px;
-  margin-top: 10px;
+  margin-top: 20px;
 `;
 
 const RaptoreumLogoContainer = styled.div`

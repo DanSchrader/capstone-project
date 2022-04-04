@@ -1,5 +1,6 @@
 import { Line } from 'react-chartjs-2';
-//import { Chart } from 'chart.js/auto';
+import { Chart } from 'chart.js/auto';
+import styled from 'styled-components';
 
 export default function HistoryChart({ historyData }) {
   const options = {
@@ -29,8 +30,12 @@ export default function HistoryChart({ historyData }) {
   };
 
   return (
-    <div>
+    <ChartWrapper>
       <Line data={historyData} options={options} />
-    </div>
+    </ChartWrapper>
   );
 }
+
+const ChartWrapper = styled.div`
+  padding: 0 40px;
+`;

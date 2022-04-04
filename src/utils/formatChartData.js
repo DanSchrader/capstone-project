@@ -10,8 +10,8 @@ export default function formatChartData(formattedData) {
       {
         label: 'Price',
         data: coinPriceList,
-        backgroundColor: 'rgb(255, 99, 132, 0.8)',
-        borderColor: 'rgba(255, 99, 132, 0.2)',
+        backgroundColor: 'rgb(58, 197, 232, 0.8)',
+        borderColor: 'rgb(58, 197, 232, 0.2)',
         fill: false,
       },
     ],
