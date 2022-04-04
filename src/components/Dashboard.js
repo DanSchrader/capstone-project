@@ -65,7 +65,7 @@ export default function Dashboard() {
           <TableValue>{coin.market_data.current_price.eur} EUR</TableValue>
           <TableIndicator>Marktkapazität:</TableIndicator>
           <TableValue>{coin.market_data.market_cap.eur} EUR</TableValue>
-          <TableIndicator>Rang (Marktkapazität):</TableIndicator>
+          <TableIndicator>Rang (Marktkap.):</TableIndicator>
           <TableValue>{coin.market_data.market_cap_rank}</TableValue>
           <TableIndicator>Maximalmenge:</TableIndicator>
           <TableValue>{coin.market_data.max_supply} RTM</TableValue>
@@ -107,18 +107,21 @@ const DashboardTableContainer = styled.section`
   grid-template-rows: 1fr 1fr 1fr 1fr;
   grid-template-columns: 1fr 1fr;
   margin: 0;
-  padding: 0 40px;
-  font-size: 80%;
-  font-weight: 300;
+  padding: 0 50px;
+  gap: 5px;
 `;
 
 const TableIndicator = styled.span`
   margin: 0;
   padding: 0;
+  font-size: 80%;
+  font-weight: 300;
 `;
 
 const TableValue = styled.span`
   color: #3ac5e8;
   margin: 0;
   padding: 0;
+  font-size: 80%;
+  font-weight: 300;
 `;

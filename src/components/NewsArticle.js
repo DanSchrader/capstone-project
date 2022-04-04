@@ -5,8 +5,8 @@ export default function NewsArticle() {
     <NewsArticleWrapper>
       <NewsArticleText>
         Es existieren mittlerweile zwei Millionen Wallets, die Raptoreum-Coins
-        aufbewahren: ein rasanter Anstieg der Nutzer seit Verfügbarkeitsbeginn
-        des Coins vor 18 Monaten.
+        aufbewahren: ein rasanter Anstieg der Nutzer seit Launch des
+        RTM-Mainnets am 26. Februar 2021.
       </NewsArticleText>
     </NewsArticleWrapper>
   );

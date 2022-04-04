@@ -13,4 +13,6 @@ export default function App() {
 
 const AppContainer = styled.div`
   max-width: 400px;
+  display: grid;
+  justify-content: center;
 `;

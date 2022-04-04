@@ -13,7 +13,7 @@ export default function NewsSection() {
 }
 
 const NewsWrapper = styled.section`
-  gap: 10px;
+  padding: 10px;
 `;
 
 const NewsTitle = styled.h2`
