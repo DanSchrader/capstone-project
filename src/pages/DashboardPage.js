@@ -15,6 +15,6 @@ const DashboardWrapper = styled.main`
   justify-self: center;
 
   @media screen and (max-width: 960px) {
-    margin-top: 40px;
+    margin-top: 50px;
   }
 `;

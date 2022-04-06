@@ -1,13 +1,10 @@
 import logo from '../images/raptoreum-logo-ger.svg';
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 import { useState } from 'react';
-import './NavBar.css';
 import { NavLink } from 'react-router-dom';
 
 export default function NavBar() {
   const [click, setClick] = useState(false);
-  //const [dropdown, setDropdown] = useState(false);
-  console.log(click);
 
   const handleClick = () => setClick(!click);
   const closeMobileMenu = () => setClick(false);
@@ -30,7 +27,7 @@ export default function NavBar() {
             className={click ? 'fa-solid fa-times' : 'fa-solid fa-bars'}
           ></MenuIcon>
         </MenuIconContainer>
-        <NavList className={click ? 'nav-menu active' : 'nav-menu'}>
+        <NavList isClicked={click}>
           <li>
             <LinkStyled to="/" onClick={closeMobileMenu}>
               Dashboard
@@ -59,11 +56,12 @@ export default function NavBar() {
 
 const NavBarHeader = styled.header`
   width: 100vw;
+  padding: 0 20px;
 `;
 
 const Nav = styled.nav`
   display: grid;
-  grid-template-columns: 250px auto auto;
+  grid-template-columns: 300px auto auto;
 
   @media screen and (max-width: 960px) {
     position: relative;
@@ -93,8 +91,8 @@ const RaptoreumLogoContainer = styled.div`
 
   @media screen and (max-width: 960px) {
     position: absolute;
-    top: -15px;
-    left: 0;
+    top: -5px;
+    left: -10px;
     transform: translate(25%, 50%);
   }
 `;
@@ -112,8 +110,8 @@ const RaptoreumDecryptdedContainer = styled.div`
 
   @media screen and (max-width: 960px) {
     position: absolute;
-    top: -17px;
-    left: 15px;
+    top: -7px;
+    left: 0;
     transform: translate(25%, 50%);
   }
 `;
@@ -121,13 +119,14 @@ const RaptoreumDecryptdedContainer = styled.div`
 const RaptoreumDecryptedText = styled.h1`
   margin: 0;
   padding: 0;
-  font-size: 120%;
+  font-size: 110%;
   font-weight: 700;
 `;
 
 const NavList = styled.ul`
-  /*display: grid;
+  display: grid;
   grid-template-columns: repeat(4, auto);
+  grid-column-end: 4;
   gap: 20px;
   list-style: none;
   padding: 0;
@@ -143,20 +142,30 @@ const NavList = styled.ul`
     height: 90vh;
     position: absolute;
     top: 70px;
-    left: ${(props) => (props.click ? '-100%' : '0')};
+    left: -100%;
     opacity: 1;
     transition: all 0.5s ease;
-    z-index: ${(props) => (props.click ? '1' : '0')};
-    text-align: right;
+    z-index: 1;
+    text-align: center;
     justify-content: unset;
     align-items: unset;
-  }*/
+
+    ${(props) =>
+      props.isClicked &&
+      css`
+        background: #121212;
+        left: 0;
+        opacity: 1;
+        transition: all 0.5s ease;
+        z-index: 1;
+      `}
+  }
 `;
 
 const LinkStyled = styled(NavLink)`
   text-decoration: none;
   color: #dcdcdc;
-  font-size: 80%;
+  font-size: 100%;
 `;
 
 const MenuIconContainer = styled.div`
@@ -165,16 +174,12 @@ const MenuIconContainer = styled.div`
   @media screen and (max-width: 960px) {
     display: block;
     position: absolute;
-    top: -15px;
+    top: 22px;
     right: 0;
-    transform: translate(-100%, 60%);
-    font-size: 1.8rem;
     cursor: pointer;
   }
 `;
 
 const MenuIcon = styled.i`
-  font-size: 90%;
+  font-size: 120%;
 `;
-
-//@media screen and (max-width: 960px) {}
