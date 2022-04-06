@@ -4,6 +4,7 @@ import styled from 'styled-components';
 
 export default function HistoryChart({ historyData }) {
   const options = {
+    responsive: true,
     plugins: {
       legend: {
         display: false,
@@ -18,7 +19,6 @@ export default function HistoryChart({ historyData }) {
       duration: 2000,
     },
     maintainAspectRatio: false,
-    responsive: true,
     legend: {
       display: false,
     },
@@ -37,5 +37,8 @@ export default function HistoryChart({ historyData }) {
 }
 
 const ChartWrapper = styled.div`
-  padding: 0 40px;
+  width: 80vw;
+  position: relative;
+  justify-self: center;
+  margin: 15px 0;
 `;

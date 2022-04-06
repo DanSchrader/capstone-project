@@ -12,13 +12,11 @@ export default function NewsSection() {
   );
 }
 
-const NewsWrapper = styled.section`
-  padding: 10px;
-`;
+const NewsWrapper = styled.section``;
 
 const NewsTitle = styled.h2`
-  font-size: 115%;
+  font-size: 100%;
   margin: 0;
-  margin: 20px 0 0 20px;
+  margin: 30px 0 0 30px;
   color: #3ac5e8;
 `;

@@ -16,7 +16,7 @@ const HeadlineWrapper = styled.div`
   display: grid;
   grid-template-columns: 30px 1fr;
   gap: 10px;
-  margin-top: 20px;
+  margin: 15px 0 0 30px;
 `;
 
 const RaptoreumLogoContainer = styled.div`
@@ -35,7 +35,8 @@ const NewsArticleLogo = styled.img`
 `;
 
 const NewsArticleHeadline = styled.h3`
-  font-size: 80%;
+  font-size: 100%;
+  font-weight: 500;
   margin: 0;
   padding: 0;
   margin-top: 5px;
