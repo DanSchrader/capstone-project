@@ -27,26 +27,26 @@ export default function NavBar() {
           <Hamburger />
         </MenuIconContainer>
         <NavList isClicked={click}>
-          <li>
+          <LinkConTainer>
             <LinkStyled to="/" onClick={closeMobileMenu}>
               Dashboard
             </LinkStyled>
-          </li>
-          <li>
+          </LinkConTainer>
+          <LinkConTainer>
             <LinkStyled to="/explanation" onClick={closeMobileMenu}>
               Beschreibung
             </LinkStyled>
-          </li>
-          <li>
+          </LinkConTainer>
+          <LinkConTainer>
             <LinkStyled to="/mining-tutorial" onClick={closeMobileMenu}>
               Mining-Anleitung
             </LinkStyled>
-          </li>
-          <li>
+          </LinkConTainer>
+          <LinkConTainer>
             <LinkStyled to="/buying-tutorial" onClick={closeMobileMenu}>
               Buying-Anleitung
             </LinkStyled>
-          </li>
+          </LinkConTainer>
         </NavList>
       </Nav>
     </NavBarHeader>
@@ -138,7 +138,7 @@ const NavList = styled.ul`
     display: flex;
     flex-direction: column;
     width: 100%;
-    height: 90vh;
+    height: 100vh;
     position: absolute;
     top: 70px;
     left: -100%;
@@ -147,7 +147,7 @@ const NavList = styled.ul`
     z-index: 1;
     text-align: center;
     justify-content: unset;
-    align-items: unset;
+    align-items: center;
 
     ${(props) =>
       props.isClicked &&
@@ -158,6 +158,14 @@ const NavList = styled.ul`
         transition: all 0.5s ease;
         z-index: 1;
       `}
+  }
+`;
+
+const LinkConTainer = styled.li`
+  @media screen and (max-width: 960px) {
+    width: 40vw;
+    padding: 5px 0;
+    border-bottom: 1px solid #454545;
   }
 `;
 
