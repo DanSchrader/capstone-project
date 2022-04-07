@@ -2,6 +2,7 @@ import logo from '../images/raptoreum-logo-ger.svg';
 import styled, { css } from 'styled-components';
 import { useState } from 'react';
 import { NavLink } from 'react-router-dom';
+import Hamburger from 'hamburger-react';
 
 export default function NavBar() {
   const [click, setClick] = useState(false);
@@ -23,9 +24,7 @@ export default function NavBar() {
           </RaptoreumDecryptdedContainer>
         </LinkStyledLogo>
         <MenuIconContainer onClick={handleClick}>
-          <MenuIcon
-            className={click ? 'fa-solid fa-times' : 'fa-solid fa-bars'}
-          ></MenuIcon>
+          <Hamburger />
         </MenuIconContainer>
         <NavList isClicked={click}>
           <li>
@@ -174,12 +173,8 @@ const MenuIconContainer = styled.div`
   @media screen and (max-width: 960px) {
     display: block;
     position: absolute;
-    top: 22px;
-    right: 0;
+    top: 7px;
+    right: 10px;
     cursor: pointer;
   }
-`;
-
-const MenuIcon = styled.i`
-  font-size: 120%;
 `;
