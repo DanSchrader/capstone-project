@@ -3,9 +3,10 @@ import Axios from 'axios';
 import HistoryChart from './HistoryChart';
 import styled from 'styled-components';
 import formatChartData from '../utils/formatChartData';
+import logo from '../images/raptoreum-logo.svg';
 
 export default function Dashboard() {
-  const [coin, setCoin] = useState();
+  const [currentData, setCurrentData] = useState();
   const [historyData, setHistoryData] = useState();
 
   const formatFetchData = (data) => {
@@ -26,7 +27,6 @@ export default function Dashboard() {
         historicalDataArray = response.data.prices;
       });
       let formattedData = formatFetchData(historicalDataArray);
-      console.log('formattedData', formattedData);
       let formattedHistoryData = formatChartData(formattedData);
       setHistoryData(formattedHistoryData);
     };
@@ -42,59 +42,84 @@ export default function Dashboard() {
       ).then((response) => {
         currentDataArray = response.data;
       });
-      setCoin(currentDataArray);
+      setCurrentData(currentDataArray);
     };
 
     fetchCurrentData();
   }, []);
-  console.log('coin', coin);
-  console.log('historyData', historyData);
 
   return (
-    <MainDashboard>
+    <SectionDashboard>
       <DashboardTitle>Dashboard</DashboardTitle>
-      {coin ? <CoinName>{coin.name}</CoinName> : <div>Loading...</div>}
+      <DashboardLegend>
+        <RaptoreumLogoContainer>
+          <LegendLogo src={logo} alt="Raptoreum-Logo" />
+        </RaptoreumLogoContainer>
+        <LegendHeadline>Raptoreum-Werte</LegendHeadline>
+      </DashboardLegend>
       {historyData ? (
         <HistoryChart historyData={historyData} />
       ) : (
-        <div>Loading...</div>
+        <div>Data is</div>
       )}
-      {coin ? (
+      {currentData ? (
         <DashboardTableContainer>
           <TableIndicator>Preis:</TableIndicator>
-          <TableValue>{coin.market_data.current_price.eur} EUR</TableValue>
+          <TableValue>
+            {currentData.market_data.current_price.eur} EUR
+          </TableValue>
           <TableIndicator>Marktkapazität:</TableIndicator>
-          <TableValue>{coin.market_data.market_cap.eur} EUR</TableValue>
+          <TableValue>{currentData.market_data.market_cap.eur} EUR</TableValue>
           <TableIndicator>Rang (Marktkap.):</TableIndicator>
-          <TableValue>{coin.market_data.market_cap_rank}</TableValue>
+          <TableValue>{currentData.market_data.market_cap_rank}</TableValue>
           <TableIndicator>Maximalmenge:</TableIndicator>
-          <TableValue>{coin.market_data.max_supply} RTM</TableValue>
+          <TableValue>{currentData.market_data.max_supply} RTM</TableValue>
         </DashboardTableContainer>
       ) : (
-        <div>Loading...</div>
+        <div>loading...</div>
       )}
-    </MainDashboard>
+    </SectionDashboard>
   );
 }
 
-const MainDashboard = styled.section`
-  padding: 10px;
+const SectionDashboard = styled.section`
   display: grid;
-  gap: 10px;
 `;
 
 const DashboardTitle = styled.h2`
-  font-size: 115%;
-  margin: 0;
-  margin-left: 20px;
+  font-size: 100%;
+  margin: 30px 0 0 30px;
   color: #3ac5e8;
 `;
 
-const CoinName = styled.h3`
-  font-size: 80%;
+const DashboardLegend = styled.div`
+  display: grid;
+  grid-template-columns: 30px 1fr;
+  gap: 10px;
+  margin: 15px 0 0 30px;
+`;
+
+const RaptoreumLogoContainer = styled.div`
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  background-color: #dcdcdc;
+  display: grid;
+  align-items: center;
+  justify-items: center;
+`;
+
+const LegendLogo = styled.img`
+  height: 27px;
+  width: 27px;
+`;
+
+const LegendHeadline = styled.h3`
+  font-size: 100%;
+  font-weight: 500;
   margin: 0;
-  margin-top: 10px;
-  margin-left: 40px;
+  padding: 0;
+  margin-top: 5px;
 `;
 
 const DashboardTableContainer = styled.section`
@@ -107,8 +132,9 @@ const DashboardTableContainer = styled.section`
   grid-template-rows: 1fr 1fr 1fr 1fr;
   grid-template-columns: 1fr 1fr;
   margin: 0;
-  padding: 0 50px;
+  padding: 0;
   gap: 5px;
+  justify-self: center;
 `;
 
 const TableIndicator = styled.span`
@@ -123,5 +149,5 @@ const TableValue = styled.span`
   margin: 0;
   padding: 0;
   font-size: 80%;
-  font-weight: 300;
+  font-weight: 200;
 `;

@@ -13,10 +13,11 @@ export default function NewsArticle() {
 }
 
 const NewsArticleWrapper = styled.article`
-  padding: 0 30px;
+  padding: 0 43px;
   margin-top: 10px;
 `;
 
 const NewsArticleText = styled.p`
-  font-size: 80%;
+  font-size: 90%;
+  font-weight: 300;
 `;
