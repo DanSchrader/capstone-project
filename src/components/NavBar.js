@@ -24,7 +24,7 @@ export default function NavBar() {
           </RaptoreumDecryptdedContainer>
         </LinkStyledLogo>
         <MenuIconContainer onClick={handleClick}>
-          <Hamburger />
+          <Hamburger toggled={click} />
         </MenuIconContainer>
         <NavList isClicked={click}>
           <LinkConTainer>
