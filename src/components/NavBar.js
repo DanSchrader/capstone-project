@@ -5,10 +5,10 @@ import { NavLink } from 'react-router-dom';
 import Hamburger from 'hamburger-react';
 
 export default function NavBar() {
-  const [click, setClick] = useState(false);
+  const [showMenu, setShowMenu] = useState(false);
 
-  const handleClick = () => setClick(!click);
-  const closeMobileMenu = () => setClick(false);
+  const handleClick = () => setShowMenu(!showMenu);
+  const closeMobileMenu = () => setShowMenu(false);
 
   return (
     <NavBarHeader>
@@ -24,9 +24,9 @@ export default function NavBar() {
           </RaptoreumDecryptdedContainer>
         </LinkStyledLogo>
         <MenuIconContainer onClick={handleClick}>
-          <Hamburger toggled={click} />
+          <Hamburger toggled={showMenu} />
         </MenuIconContainer>
-        <NavList isClicked={click}>
+        <NavList isClicked={showMenu}>
           <LinkConTainer>
             <LinkStyled to="/" onClick={closeMobileMenu}>
               Dashboard
@@ -172,7 +172,7 @@ const LinkConTainer = styled.li`
 const LinkStyled = styled(NavLink)`
   text-decoration: none;
   color: #dcdcdc;
-  font-size: 100%;
+  font-size: 80%;
 `;
 
 const MenuIconContainer = styled.div`

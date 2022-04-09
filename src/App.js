@@ -10,12 +10,14 @@ export default function App() {
   return (
     <AppContainer>
       <NavBar />
-      <Routes>
-        <Route path="/" element={<DashboardPage />} />
-        <Route path="/explanation" element={<ExplanationPage />} />
-        <Route path="/mining-tutorial" element={<MiningDocPage />} />
-        <Route path="/buying-tutorial" element={<BuyingDocPage />} />
-      </Routes>
+      <Pages>
+        <Routes>
+          <Route path="/" element={<DashboardPage />} />
+          <Route path="/explanation" element={<ExplanationPage />} />
+          <Route path="/mining-tutorial" element={<MiningDocPage />} />
+          <Route path="/buying-tutorial" element={<BuyingDocPage />} />
+        </Routes>
+      </Pages>
     </AppContainer>
   );
 }
@@ -23,4 +25,8 @@ export default function App() {
 const AppContainer = styled.div`
   width: 100vw;
   padding: 10px;
+`;
+
+const Pages = styled.main`
+  justify-self: center;
 `;
