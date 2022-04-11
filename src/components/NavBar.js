@@ -29,22 +29,22 @@ export default function NavBar() {
         <NavList isClicked={showMenu}>
           <LinkConTainer>
             <LinkStyled to="/" onClick={closeMobileMenu}>
-              Dashboard
+              <LinkButton>Dashboard</LinkButton>
             </LinkStyled>
           </LinkConTainer>
           <LinkConTainer>
             <LinkStyled to="/explanation" onClick={closeMobileMenu}>
-              Beschreibung
+              <LinkButton>Beschreibung</LinkButton>
             </LinkStyled>
           </LinkConTainer>
           <LinkConTainer>
             <LinkStyled to="/mining-tutorial" onClick={closeMobileMenu}>
-              Mining-Anleitung
+              <LinkButton>Mining-Anleitung</LinkButton>
             </LinkStyled>
           </LinkConTainer>
           <LinkConTainer>
             <LinkStyled to="/buying-tutorial" onClick={closeMobileMenu}>
-              Buying-Anleitung
+              <LinkButton>Buying-Anleitung</LinkButton>
             </LinkStyled>
           </LinkConTainer>
         </NavList>
@@ -128,15 +128,19 @@ const NavList = styled.ul`
   grid-column-end: 4;
   gap: 20px;
   list-style: none;
-  padding: 0;
-  margin: 0;
+  padding-left: 0;
+  margin-right: 20px;
   text-align: center;
   justify-content: end;
   align-items: center;
 
   @media screen and (max-width: 960px) {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: unset;
+    grid-template-rows: 48px 48px 48px 48px;
+    padding: 0;
+    margin: 0;
+    gap: 20px;
     width: 100%;
     height: 100vh;
     position: absolute;
@@ -146,7 +150,7 @@ const NavList = styled.ul`
     transition: all 0.5s ease;
     z-index: 1;
     text-align: center;
-    justify-content: unset;
+    justify-content: center;
     align-items: center;
 
     ${(props) =>
@@ -162,17 +166,31 @@ const NavList = styled.ul`
 `;
 
 const LinkConTainer = styled.li`
+  display: grid;
+
   @media screen and (max-width: 960px) {
     width: 40vw;
-    padding: 5px 0;
     border-bottom: 1px solid #454545;
   }
 `;
 
 const LinkStyled = styled(NavLink)`
+  display: grid;
   text-decoration: none;
+  padding: 0;
+  margin: 0;
+
+  @media screen and (max-width: 960px) {
+    height: 48px;
+  }
+`;
+
+const LinkButton = styled.button`
+  background: transparent;
+  border: none;
   color: #dcdcdc;
   font-size: 80%;
+  cursor: pointer;
 `;
 
 const MenuIconContainer = styled.div`

@@ -39,13 +39,12 @@ export default function ExplanationPage() {
 const Wrapper = styled.div`
   display: grid;
   position: relative;
-  margin-top: 70px;
+  margin-top: 50px;
 `;
 
 const ButtonList = styled.ul`
   list-style: none;
   padding-left: 0;
-  margin-top: 70px;
   display: grid;
   justify-self: center;
   gap: 20px;
@@ -58,16 +57,16 @@ const ButtonList = styled.ul`
 
 const StyledListItem = styled.li`
   display: grid;
-  padding: 5px 0;
 `;
 
 const StyledExplButton = styled.button`
   background: transparent;
   border: none;
-  padding-bottom: 5px;
   border-bottom: solid 1px #454545;
   color: #dcdcdc;
   font-size: 80%;
+  cursor: pointer;
+  height: 48px;
 `;
 
 const ExplanationList = styled.ul`
