@@ -1,124 +1,142 @@
 import styled, { css } from 'styled-components';
 import explanations from '../utils/explanations';
-import ExplanationHeadline from '../components/explanations/ExplanationHeadline';
-import ExplanationText from '../components/explanations/ExplanationText';
 import { useState } from 'react';
+import ExplanationHeadline from '../components/ExplanationHeadline';
+import ExplanationText from '../components/ExplanationText';
 
 export default function ExplanationPage() {
   const [showExplanation, setShowExplanation] = useState(false);
+  const [explanationList, setExplanationList] = useState(explanations);
 
-  const handleExplanation = () => setShowExplanation(!showExplanation);
-  const hideExplanation = () => setShowExplanation(false);
+  const hideExplanation = () => {
+    setShowExplanation(false);
+    setExplanationList(explanations);
+  };
 
   return (
     <Wrapper>
-      <ButtonList>
-        {explanations.map((button) => (
-          <StyledListItem key={button.name}>
-            <StyledExplButton onClick={handleExplanation}>
-              {button.name}
-            </StyledExplButton>
-          </StyledListItem>
+      <QuestionList>
+        {explanationList.map(({ _id, name }) => {
+          return (
+            <StyledListItem key={_id}>
+              <StyledExplButton
+                onClick={() => {
+                  setExplanationList((explanationList) =>
+                    explanationList.filter(
+                      (explanation) => explanation._id === _id
+                    )
+                  );
+                  setShowExplanation(!showExplanation);
+                  window.scrollTo(0, 0);
+                }}
+              >
+                {name}
+              </StyledExplButton>
+            </StyledListItem>
+          );
+        })}
+      </QuestionList>
+      <AnswerList isShown={showExplanation}>
+        {explanationList.map(({ _id, question, answer }) => (
+          <AnswerItem key={_id} isShown={showExplanation}>
+            <ExplanationHeadline headline={question} />
+            <ExplanationText text={answer} />
+            <CloseExplButton onClick={hideExplanation}>
+              <i className="fa fa-times" />
+            </CloseExplButton>
+          </AnswerItem>
         ))}
-      </ButtonList>
-      <ExplanationList isActivated={showExplanation}>
-        {explanations.map((article) => (
-          <Explanation key={article._id}>
-            <ExplanationHeadline headline={article.question} />
-            <ExplanationText text={article.answer} />
-          </Explanation>
-        ))}
-      </ExplanationList>
-      <CloseExplButton onClick={hideExplanation} isActivated={showExplanation}>
-        <i className="fa-solid fa-times"></i>
-      </CloseExplButton>
+      </AnswerList>
     </Wrapper>
   );
 }
 
 const Wrapper = styled.div`
   display: grid;
-  position: relative;
   margin-top: 50px;
 `;
 
-const ButtonList = styled.ul`
+const QuestionList = styled.ul`
   list-style: none;
   padding-left: 0;
   display: grid;
+  position: relative;
   justify-self: center;
   gap: 20px;
-  width: 40vw;
+  width: 100%;
 
   @media screen and (max-width: 960px) {
-    width: unset;
   }
 `;
 
 const StyledListItem = styled.li`
   display: grid;
+  justify-items: center;
+  position: relative;
 `;
 
 const StyledExplButton = styled.button`
   background: transparent;
   border: none;
-  border-bottom: solid 1px #454545;
+  border-bottom: solid 1px #565656;
   color: #dcdcdc;
   font-size: 80%;
   cursor: pointer;
   height: 48px;
+  width: 300px;
+  position: relative;
 `;
 
-const ExplanationList = styled.ul`
+const AnswerList = styled.ul`
+  display: grid;
   list-style: none;
   padding-left: 0;
-  justify-self: center;
-  width: 100vw;
   position: absolute;
-  right: -120%;
+  width: 100%;
+  height: 100vh;
+  left: -100%;
+  z-index: 1;
+  background: #121212;
+  transition: all 0.5s ease;
+  opacity: 1;
 
   ${(props) =>
-    props.isActivated &&
+    props.isShown &&
     css`
-      background: #121212;
-      right: 0;
+      left: 0;
       opacity: 1;
       transition: all 0.5s ease;
       z-index: 1;
     `}
-
-  @media screen and (max-width: 960px) {
-    width: 100vw;
-    position: absolute;
-
-    ${(props) =>
-      props.isActivated &&
-      css`
-        background: #121212;
-        right: 0;
-        opacity: 1;
-        transition: all 0.5s ease;
-        z-index: 1;
-      `}
-  }
 `;
 
-const Explanation = styled.article`
+const AnswerItem = styled.li`
   display: grid;
+  grid-template-rows: 50px auto;
   position: absolute;
+  opacity: 0;
+  width: 100%;
+  left: -100%;
+  transition: all 0.5s ease;
+
+  ${(props) =>
+    props.isShown &&
+    css`
+      left: 0;
+      opacity: 1;
+      transition: all 0.5s ease;
+      z-index: 1;
+    `}
 `;
 
 const CloseExplButton = styled.button`
   position: absolute;
-  right: -100%;
-  top: 10px;
-
-  ${(props) =>
-    props.isActivated &&
-    css`
-      right: 0;
-      opacity: 1;
-      transition: all 0.5s ease;
-      z-index: 1;
-    `}
+  right: 10px;
+  top: 2px;
+  background: none;
+  border: none;
+  color: #dcdcdc;
+  font-size: 150%;
+  height: 48px;
+  width: 48px;
 `;

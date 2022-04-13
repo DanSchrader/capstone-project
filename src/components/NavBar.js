@@ -72,6 +72,7 @@ const LinkStyledLogo = styled(NavLink)`
   grid-template-columns: 50px auto;
   text-decoration: none;
   color: #dcdcdc;
+  align-items: center;
 `;
 
 const RaptoreumLogoContainer = styled.div`
@@ -145,10 +146,10 @@ const NavList = styled.ul`
     height: 100vh;
     position: absolute;
     top: 70px;
-    left: -100%;
+    right: -100%;
     opacity: 1;
     transition: all 0.5s ease;
-    z-index: 1;
+    z-index: 2;
     text-align: center;
     justify-content: center;
     align-items: center;
@@ -157,20 +158,21 @@ const NavList = styled.ul`
       props.isClicked &&
       css`
         background: #121212;
-        left: 0;
+        right: 0;
         opacity: 1;
         transition: all 0.5s ease;
-        z-index: 1;
+        z-index: 2;
       `}
   }
 `;
 
 const LinkConTainer = styled.li`
   display: grid;
+  border-bottom: 1px solid #565656;
 
   @media screen and (max-width: 960px) {
     width: 40vw;
-    border-bottom: 1px solid #454545;
+    border-bottom: 1px solid #565656;
   }
 `;
 
