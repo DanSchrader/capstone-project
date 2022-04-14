@@ -5,10 +5,10 @@ import { NavLink } from 'react-router-dom';
 import Hamburger from 'hamburger-react';
 
 export default function NavBar() {
-  const [click, setClick] = useState(false);
+  const [showMenu, setShowMenu] = useState(false);
 
-  const handleClick = () => setClick(!click);
-  const closeMobileMenu = () => setClick(false);
+  const handleClick = () => setShowMenu(!showMenu);
+  const closeMobileMenu = () => setShowMenu(false);
 
   return (
     <NavBarHeader>
@@ -24,27 +24,27 @@ export default function NavBar() {
           </RaptoreumDecryptdedContainer>
         </LinkStyledLogo>
         <MenuIconContainer onClick={handleClick}>
-          <Hamburger />
+          <Hamburger toggled={showMenu} />
         </MenuIconContainer>
-        <NavList isClicked={click}>
+        <NavList isClicked={showMenu}>
           <LinkConTainer>
             <LinkStyled to="/" onClick={closeMobileMenu}>
-              Dashboard
+              <LinkButton>Dashboard</LinkButton>
             </LinkStyled>
           </LinkConTainer>
           <LinkConTainer>
             <LinkStyled to="/explanation" onClick={closeMobileMenu}>
-              Beschreibung
+              <LinkButton>Beschreibung</LinkButton>
             </LinkStyled>
           </LinkConTainer>
           <LinkConTainer>
             <LinkStyled to="/mining-tutorial" onClick={closeMobileMenu}>
-              Mining-Anleitung
+              <LinkButton>Mining-Anleitung</LinkButton>
             </LinkStyled>
           </LinkConTainer>
           <LinkConTainer>
             <LinkStyled to="/buying-tutorial" onClick={closeMobileMenu}>
-              Buying-Anleitung
+              <LinkButton>Buying-Anleitung</LinkButton>
             </LinkStyled>
           </LinkConTainer>
         </NavList>
@@ -72,6 +72,7 @@ const LinkStyledLogo = styled(NavLink)`
   grid-template-columns: 50px auto;
   text-decoration: none;
   color: #dcdcdc;
+  align-items: center;
 `;
 
 const RaptoreumLogoContainer = styled.div`
@@ -128,51 +129,70 @@ const NavList = styled.ul`
   grid-column-end: 4;
   gap: 20px;
   list-style: none;
-  padding: 0;
-  margin: 0;
+  padding-left: 0;
+  margin-right: 20px;
   text-align: center;
   justify-content: end;
   align-items: center;
 
   @media screen and (max-width: 960px) {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: unset;
+    grid-template-rows: 48px 48px 48px 48px;
+    padding: 0;
+    margin: 0;
+    gap: 20px;
     width: 100%;
     height: 100vh;
     position: absolute;
     top: 70px;
-    left: -100%;
+    right: -100%;
     opacity: 1;
     transition: all 0.5s ease;
-    z-index: 1;
+    z-index: 2;
     text-align: center;
-    justify-content: unset;
+    justify-content: center;
     align-items: center;
 
     ${(props) =>
       props.isClicked &&
       css`
         background: #121212;
-        left: 0;
+        right: 0;
         opacity: 1;
         transition: all 0.5s ease;
-        z-index: 1;
+        z-index: 2;
       `}
   }
 `;
 
 const LinkConTainer = styled.li`
+  display: grid;
+  border-bottom: 1px solid #565656;
+
   @media screen and (max-width: 960px) {
     width: 40vw;
-    padding: 5px 0;
-    border-bottom: 1px solid #454545;
+    border-bottom: 1px solid #565656;
   }
 `;
 
 const LinkStyled = styled(NavLink)`
+  display: grid;
   text-decoration: none;
+  padding: 0;
+  margin: 0;
+
+  @media screen and (max-width: 960px) {
+    height: 48px;
+  }
+`;
+
+const LinkButton = styled.button`
+  background: transparent;
+  border: none;
   color: #dcdcdc;
-  font-size: 100%;
+  font-size: 80%;
+  cursor: pointer;
 `;
 
 const MenuIconContainer = styled.div`

@@ -13,9 +13,9 @@ export const parameters = {
 
 export const decorators = [
   (Story) => (
-    <>
+    <MemoryRouter>
       <GlobalStyles />
       <Story />
-    </>
+    </MemoryRouter>
   ),
 ];

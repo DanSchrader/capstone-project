@@ -1,12 +1,13 @@
 import { render, screen } from '@testing-library/react';
-import Header from './Header.js';
+import NavBar from './Navbar.js';
+import { MemoryRouter } from 'react-router-dom';
 
 describe('Header', () => {
   it('shows a logo and a title', () => {
-    render(<Header />);
+    render(<NavBar />, { wrapper: MemoryRouter });
 
     const logo = screen.getByRole('img');
-    const title = screen.getByText('Raptoreum', { exact: false });
+    const title = screen.getByText('raptoreum', { exact: false });
 
     expect(logo).toBeInTheDocument();
     expect(title).toBeInTheDocument();
