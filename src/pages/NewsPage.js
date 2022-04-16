@@ -1,21 +1,16 @@
 import styled from 'styled-components';
 import ScrollToTop from '../utils/ScrollToTop';
+import NewsSection from '../components/NewsSection';
 
-export default function BuyingDocPage() {
+export default function NewsPage() {
   return (
     <Wrapper>
       <ScrollToTop />
-      <Placeholder>BuyingDocPage</Placeholder>
+      <NewsSection />
     </Wrapper>
   );
 }
 
 const Wrapper = styled.div`
   display: grid;
-`;
-
-const Placeholder = styled.div`
-  justify-self: center;
-  position: fixed;
-  top: 40vh;
 `;

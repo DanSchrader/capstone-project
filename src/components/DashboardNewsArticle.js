@@ -1,18 +1,16 @@
 import styled from 'styled-components';
 
-export default function NewsArticle({ text }) {
+export default function DashboardNewsArticle({ mostRecentNews }) {
   return (
     <NewsArticleWrapper>
-      <NewsArticleText>{text}</NewsArticleText>
+      <NewsArticleText>{mostRecentNews.text}</NewsArticleText>
     </NewsArticleWrapper>
   );
 }
 
 const NewsArticleWrapper = styled.article`
-  padding: 0 15px;
-  margin: 0 28px;
+  padding: 0 43px;
   margin-top: 10px;
-  border-bottom: solid 1px #565656;
 `;
 
 const NewsArticleText = styled.p`

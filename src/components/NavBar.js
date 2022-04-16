@@ -38,8 +38,8 @@ export default function NavBar() {
             </LinkStyled>
           </LinkConTainer>
           <LinkConTainer>
-            <LinkStyled to="/mining-tutorial" onClick={closeMobileMenu}>
-              <LinkButton>Mining-Anleitung</LinkButton>
+            <LinkStyled to="/news" onClick={closeMobileMenu}>
+              <LinkButton>News</LinkButton>
             </LinkStyled>
           </LinkConTainer>
           <LinkConTainer>
@@ -146,7 +146,7 @@ const NavList = styled.ul`
     height: 100vh;
     position: absolute;
     top: 70px;
-    right: -100%;
+    left: -100%;
     opacity: 1;
     transition: all 0.5s ease;
     z-index: 2;
@@ -158,7 +158,7 @@ const NavList = styled.ul`
       props.isClicked &&
       css`
         background: #121212;
-        right: 0;
+        left: 0;
         opacity: 1;
         transition: all 0.5s ease;
         z-index: 2;

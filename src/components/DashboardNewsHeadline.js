@@ -1,31 +1,26 @@
 import styled from 'styled-components';
 import logo from '../images/raptoreum-logo-bw.svg';
 
-export default function NewsArticleHeader({ headline, date }) {
+export default function DashboardNewsHeader({ mostRecentNews }) {
   return (
     <HeadlineWrapper>
       <RaptoreumLogoContainer>
         <NewsArticleLogo src={logo} alt="Raptoreum-Logo" />
       </RaptoreumLogoContainer>
-      <NewsArticleHeadline>{headline}</NewsArticleHeadline>
-      <NewsArticleDate>{date}</NewsArticleDate>
+      <NewsArticleHeadline>{mostRecentNews.headline}</NewsArticleHeadline>
     </HeadlineWrapper>
   );
 }
 
 const HeadlineWrapper = styled.div`
   display: grid;
-  grid-template-areas:
-    'logo headline'
-    'date date';
   grid-template-columns: 30px 1fr;
-  align-items: center;
   gap: 10px;
-  margin: 15px 30px 15px 30px;
+  margin: 15px 0 0 30px;
+  align-items: center;
 `;
 
 const RaptoreumLogoContainer = styled.div`
-  grid-area: logo;
   height: 30px;
   width: 30px;
   border-radius: 50%;
@@ -41,16 +36,9 @@ const NewsArticleLogo = styled.img`
 `;
 
 const NewsArticleHeadline = styled.h3`
-  grid-area: headline;
   font-size: 90%;
   font-weight: 500;
   margin: 0;
   padding: 0;
-`;
-
-const NewsArticleDate = styled.span`
-  grid-area: date;
-  font-size: 80%;
-  font-weight: 300;
-  padding-left: 13px;
+  padding-right: 43px;
 `;
