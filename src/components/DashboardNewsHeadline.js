@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import logo from '../images/raptoreum-logo-bw.svg';
+import logo from '../images/raptoreum-logo.svg';
 
 export default function DashboardNewsHeader({ mostRecentNews }) {
   return (
@@ -8,23 +8,28 @@ export default function DashboardNewsHeader({ mostRecentNews }) {
         <NewsArticleLogo src={logo} alt="Raptoreum-Logo" />
       </RaptoreumLogoContainer>
       <NewsArticleHeadline>{mostRecentNews.headline}</NewsArticleHeadline>
+      <NewsArticleDate>{mostRecentNews.date}</NewsArticleDate>
     </HeadlineWrapper>
   );
 }
 
 const HeadlineWrapper = styled.div`
   display: grid;
+  grid-template-areas:
+    'logo headline'
+    'date date';
   grid-template-columns: 30px 1fr;
   gap: 10px;
-  margin: 15px 0 0 30px;
+  margin: 15px 30px 15px 30px;
   align-items: center;
 `;
 
 const RaptoreumLogoContainer = styled.div`
+  grid-area: logo;
   height: 30px;
   width: 30px;
   border-radius: 50%;
-  background-color: #c53a17;
+  background-color: #dcdcdc;
   display: grid;
   align-items: center;
   justify-items: center;
@@ -36,9 +41,17 @@ const NewsArticleLogo = styled.img`
 `;
 
 const NewsArticleHeadline = styled.h3`
+  grid-area: headline;
   font-size: 90%;
   font-weight: 500;
   margin: 0;
   padding: 0;
-  padding-right: 43px;
+`;
+
+const NewsArticleDate = styled.span`
+  grid-area: date;
+  font-size: 80%;
+  font-weight: 300;
+  padding-left: 13px;
+  color: #3ac5e8;
 `;

@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import logo from '../images/raptoreum-logo-bw.svg';
+import logo from '../images/raptoreum-logo.svg';
 
 export default function NewsArticleHeader({ headline, date }) {
   return (
@@ -29,7 +29,7 @@ const RaptoreumLogoContainer = styled.div`
   height: 30px;
   width: 30px;
   border-radius: 50%;
-  background-color: #c53a17;
+  background-color: #dcdcdc;
   display: grid;
   align-items: center;
   justify-items: center;
@@ -53,4 +53,5 @@ const NewsArticleDate = styled.span`
   font-size: 80%;
   font-weight: 300;
   padding-left: 13px;
+  color: #3ac5e8;
 `;

@@ -9,8 +9,8 @@ export default function DashboardNewsArticle({ mostRecentNews }) {
 }
 
 const NewsArticleWrapper = styled.article`
-  padding: 0 43px;
-  margin-top: 10px;
+  padding: 0 15px;
+  margin: 0 28px;
 `;
 
 const NewsArticleText = styled.p`
@@ -18,4 +18,5 @@ const NewsArticleText = styled.p`
   font-weight: 300;
   text-align: justify;
   hyphens: auto;
+  margin: 0;
 `;
