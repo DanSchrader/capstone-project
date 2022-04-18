@@ -1,14 +1,14 @@
 import styled from 'styled-components';
 import logo from '../images/raptoreum-logo.svg';
 
-export default function NewsArticleHeader({ headline, date }) {
+export default function DashboardNewsHeader({ mostRecentNews }) {
   return (
     <HeadlineWrapper>
       <RaptoreumLogoContainer>
         <NewsArticleLogo src={logo} alt="Raptoreum-Logo" />
       </RaptoreumLogoContainer>
-      <NewsArticleHeadline>{headline}</NewsArticleHeadline>
-      <NewsArticleDate>{date}</NewsArticleDate>
+      <NewsArticleHeadline>{mostRecentNews.headline}</NewsArticleHeadline>
+      <NewsArticleDate>{mostRecentNews.date}</NewsArticleDate>
     </HeadlineWrapper>
   );
 }
@@ -19,9 +19,9 @@ const HeadlineWrapper = styled.div`
     'logo headline'
     'date date';
   grid-template-columns: 30px 1fr;
-  align-items: center;
   gap: 10px;
   margin: 15px 30px 15px 30px;
+  align-items: center;
 `;
 
 const RaptoreumLogoContainer = styled.div`

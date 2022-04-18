@@ -1,8 +1,9 @@
 import styled, { css } from 'styled-components';
-import explanations from '../utils/explanations';
+import explanations from '../utils/explanationsData';
 import { useState } from 'react';
 import ExplanationHeadline from '../components/ExplanationHeadline';
 import ExplanationText from '../components/ExplanationText';
+import ScrollToTop from '../utils/ScrollToTop';
 
 export default function ExplanationPage() {
   const [showExplanation, setShowExplanation] = useState(false);
@@ -15,6 +16,7 @@ export default function ExplanationPage() {
 
   return (
     <Wrapper>
+      <ScrollToTop />
       <QuestionList>
         {explanationList.map(({ _id, name }) => {
           return (

@@ -1,12 +1,14 @@
 import styled from 'styled-components';
 import Dashboard from '../components/Dashboard';
-import NewsSection from '../components/NewsSection';
+import DashboardNews from '../components/DashboardNews';
+import ScrollToTop from '../utils/ScrollToTop';
 
 export default function DashboardPage() {
   return (
     <DashboardWrapper>
+      <ScrollToTop />
       <Dashboard />
-      <NewsSection />
+      <DashboardNews />
     </DashboardWrapper>
   );
 }
