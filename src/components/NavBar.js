@@ -43,8 +43,8 @@ export default function NavBar() {
             </LinkStyled>
           </LinkConTainer>
           <LinkConTainer>
-            <LinkStyled to="/buying-tutorial" onClick={closeMobileMenu}>
-              <LinkButton>Buying-Anleitung</LinkButton>
+            <LinkStyled to="/mining-tutorial" onClick={closeMobileMenu}>
+              <LinkButton>Mining-Anleitung</LinkButton>
             </LinkStyled>
           </LinkConTainer>
         </NavList>
