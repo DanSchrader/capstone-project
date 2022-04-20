@@ -14,5 +14,5 @@ const ImageContainer = styled.div`
 `;
 
 const TutorialImage = styled.img`
-  width: 100%;
+  max-width: 275px;
 `;

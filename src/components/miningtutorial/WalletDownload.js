@@ -59,4 +59,5 @@ const StyledLink = styled.a`
   margin: 0 43px;
   margin-top: 20px;
   border-bottom: solid 1px #3ac5e8;
+  cursor: pointer;
 `;

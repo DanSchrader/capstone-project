@@ -17,7 +17,9 @@ export default function MinerDownload({ hideTutorialArticle }) {
       <MiningTutorialText
         text={'Wir besuchen der Einfachheit halber die Seite'}
       />
-      <StyledLink>xmrig.com/download</StyledLink>
+      <StyledLink href="http://www.xmrig.com/download">
+        xmrig.com/download
+      </StyledLink>
       <MiningTutorialText
         text={
           'und laden uns die aktuelle Version von XMRig für Win64 herunter. Jetzt wird so ziemlich jeder Browser meckern und den Download verhindern wollen. Ein Mining-Programm wird immer als Schadsoftware eingestuft. Wir gestatten den Download manuell und speichern die .zip-Datei ebenfalls in unserem Mining-Ordner ab.'
@@ -49,4 +51,5 @@ const StyledLink = styled.a`
   margin: 0 43px;
   margin-top: 20px;
   border-bottom: solid 1px #3ac5e8;
+  cursor: pointer;
 `;
