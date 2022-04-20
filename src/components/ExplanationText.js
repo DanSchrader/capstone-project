@@ -8,6 +8,9 @@ export default function ExplanationText({ text }) {
       <Text>{text.p3}</Text>
       <Text>{text.p4}</Text>
       <Text>{text.p5}</Text>
+      <Text>{text.p6}</Text>
+      <Text>{text.p7}</Text>
+      <Text>{text.p8}</Text>
     </TextWrapper>
   );
 }
