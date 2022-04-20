@@ -1,5 +1,17 @@
 const explanations = [
   {
+    name: 'Was ist Raptoreum?',
+    _id: 'raptoreum',
+    question: 'Was ist Raptoreum?',
+    answer: {
+      p1: 'Viele denken an Umweltschutz und Stromverbrauch als Gegenargument für Kryptowährung. Tatsächlich ist es so, dass der gesamte Energiebedarf rund um Kryptowährungen nur einen Bruchteil des Energiebedarfs rund um Echtgeld ausmacht.',
+      p2: 'Man denke an die Server der Banken, die Geldkartentransaktionen und- terminals, an Geldautomaten, die Herstellung und den Umlauf von Echtgeld. Echtgeldüberweisungen dauern mehrere Tage, sind oft mit hohen Gebühren verbunden - vor allem bei Auslandsüberweisungen - und bergen hohe Sicherheitsrisiken.',
+      p3: 'Kryptotransktionen dauern nur Minuten, haben niedrige Gebühren und sind viel sicherer. Dabei sind sie auch transparenter, weil jeder jederzeit alle Krypto-Transaktionen in einer Art öffentlichen Kassenbuch der jeweiligen Währung nachprüfen kann.',
+      p4: 'Zudem kann man die Verschlüsselungs- und Speicherfunktionen der Krypto-Blockchains für viele zusätzliche Einsatzzwecke nutzen:',
+      p5: 'Datensicherung und Datenschutz sensibler Daten, Automatisierung und Beschleunigung von Sachbearbeitungsprozessen, Lebensmittel können in der Produktionskette zum Ursprungsort zurück verfolgt werden, digitale Wahlen können weltweit umgesetzt werden und die Verwaltung und das Ausstellen von Zertifikaten (Zeugnisse, Besitzurkunden, Eintrittskarten - alle diese Vorteile und viele mehr bietet die Technologie hinter Kryptowährungen. Schnell, transparent und fälschungssicher!',
+    },
+  },
+  {
     name: 'Was sind Kryptowährungen?',
     _id: 'crypto',
     question: 'Was sind Kryptowährungen?',
