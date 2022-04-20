@@ -1,5 +1,20 @@
 const explanations = [
   {
+    name: 'Was ist Raptoreum?',
+    _id: 'raptoreum',
+    question: 'Was ist Raptoreum?',
+    answer: {
+      p1: 'Vorab: Sollten Begriffe wie Kryptowährung, Asset oder Blockchain unklar sein, lies bitte ab dem Artikel "Was sind Kryptowährungen?" weiter und kehre im Anschluss zu diesem Artikel zurück.',
+      p2: 'Raptoreum ist zum einen eine Kryptowährung und zum anderen eine Asset-Platform, die unterschiedliche Dienstleistungen anbietet. Raptoreum befindet sich seit 2018 in der Entwicklung. Der Launch des Mainnets war 2021.',
+      p3: 'Die Entwickler erkannten einige Problematiken an anderen Kryptowährungen, wie die erhöhten Transaktionsgebühren und suboptimale Skalierung bei Ethereum und anderen Währungen, die man als schwer vorhersehbare Nebeneffekte toller Ideen deuten kann.',
+      p4: 'Mit diesen Erfahrungswerten wollte man eine neue Kryptowährung kreieren, die sich stetig weiterentwickelt und anpassungsfähig ist. Als erste Code-Basis sollte hierfür ein Fork der Raven-Coin-Basis dienen.',
+      p5: 'Jedoch stieß man recht schnell auf Probleme in diesem Code. Der Code der Open-Source-Peer-To-Peer-Kryptowährung "Dash" erwies sich als zweckdienlicher und seitdem wird Raptoreum auf dieser Basis entwickelt.',
+      p6: 'Raptoreum setzt sich zum Ziel, eine dezentralisierte, für Jedermann frei zugängliche Proof-of-Work-Kryptowährung zu bleiben, die sich für kleine Unterstützer groß macht, ASIC-Miner ausschließt und dauerhaft mit niedrigen Transaktionsgebühren aufwarten kann.',
+      p7: 'User können ihre Coins in Smart-Nodes einlagern und sogar mit der Bereitstellung eigener Smart-Nodes zur Effektivität des dezentralisierten Netzwerks beitragen.',
+      p8: 'Die nächsten Entwicklungsschritte sind so genannte Futures - Transaktionen, die durch Bestätigung oder einen bestimmten Zeitstempel ausgelöst werden - und Smart Contracts, die es externen Entwicklern erlauben, die Blockchain-Funktionen des Netzwerks mit gängigen Programmiersprachen zu implementieren.',
+    },
+  },
+  {
     name: 'Was sind Kryptowährungen?',
     _id: 'crypto',
     question: 'Was sind Kryptowährungen?',

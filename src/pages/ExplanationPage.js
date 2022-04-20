@@ -15,7 +15,7 @@ export default function ExplanationPage() {
   };
 
   return (
-    <Wrapper>
+    <ExplanationsWrapper>
       <ScrollToTop />
       <ExplanationTitle>Beschreibung</ExplanationTitle>
       <QuestionList>
@@ -50,11 +50,11 @@ export default function ExplanationPage() {
           </AnswerItem>
         ))}
       </AnswerList>
-    </Wrapper>
+    </ExplanationsWrapper>
   );
 }
 
-const Wrapper = styled.div`
+const ExplanationsWrapper = styled.div`
   display: grid;
   margin-top: 50px;
 `;
@@ -102,8 +102,9 @@ const AnswerList = styled.ul`
   list-style: none;
   padding-left: 0;
   position: absolute;
+  top: 110px;
   width: 100%;
-  height: 100vh;
+  height: 100%;
   left: -100%;
   z-index: 1;
   background: #121212;
@@ -141,8 +142,8 @@ const AnswerItem = styled.li`
 
 const CloseExplButton = styled.button`
   position: absolute;
-  right: 10px;
-  top: 2px;
+  right: 35px;
+  top: -30px;
   background: none;
   border: none;
   color: #dcdcdc;
