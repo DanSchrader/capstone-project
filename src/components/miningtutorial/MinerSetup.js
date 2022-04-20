@@ -76,4 +76,5 @@ export default function MinerSetup({ hideTutorialArticle }) {
 const TutorialArticleItem = styled.li`
   display: grid;
   position: absolute;
+  padding-bottom: 20px;
 `;

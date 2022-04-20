@@ -30,5 +30,5 @@ export default function Hint({ hideTutorialArticle }) {
 const TutorialArticleItem = styled.li`
   display: grid;
   position: absolute;
-  background: #121212;
+  padding-bottom: 20px;
 `;

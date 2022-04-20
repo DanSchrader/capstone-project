@@ -41,4 +41,5 @@ export default function MinerConfig({ hideTutorialArticle }) {
 const TutorialArticleItem = styled.li`
   display: grid;
   position: absolute;
+  padding-bottom: 20px;
 `;

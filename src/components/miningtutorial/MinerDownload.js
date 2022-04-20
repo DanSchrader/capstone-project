@@ -42,6 +42,7 @@ export default function MinerDownload({ hideTutorialArticle }) {
 const TutorialArticleItem = styled.li`
   display: grid;
   position: absolute;
+  padding-bottom: 20px;
 `;
 
 const StyledLink = styled.a`

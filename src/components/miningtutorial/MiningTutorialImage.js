@@ -11,6 +11,7 @@ export default function MiningTutorialImage({ src, alt }) {
 const ImageContainer = styled.div`
   display: grid;
   margin: 20px 43px 0 43px;
+  justify-self: center;
 `;
 
 const TutorialImage = styled.img`
