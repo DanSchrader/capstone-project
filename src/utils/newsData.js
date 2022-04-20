@@ -6,12 +6,6 @@ const news = [
     _id: 2022041301,
   },
   {
-    headline: 'Raptoreum wieder auf Platz #1 der TOP10 Native Coins',
-    text: 'In Woche 14/2022 wurde Raptoreum erneut auf Platz #1 der Voting-Platform CoinMarketCap in den TOP10 der Native Coins gewählt - gefolgt von ReddCoin, P2P Solutions und DogeCash.',
-    date: '11. April 2022',
-    _id: 2022041101,
-  },
-  {
     headline: 'Raptoreum auf der Paris Blockchain Week Summit',
     text: 'Paul Mills vom Raptoreum Core-Team und Fabrice Cru von Raptoreum France werden vom 13. bis 14. April auf der Paris Blockchain Week Summit vertreten sein.',
     date: '07. April 2022',
@@ -25,7 +19,7 @@ const news = [
   },
   {
     headline: 'Raptoreum auf Platz #1 der TOP10 Native Coins',
-    text: 'In Woche 12/2022 wurde Raptoreum auf Platz #1 der Voting-Platform CoinMarketCap in den TOP10 der Native Coins gewählt - gefolgt von Avian, ReddCoin und DogeCash.',
+    text: 'In Woche 12/2022 wurde Raptoreum zum wiederholten Mal auf Platz #1 der Plattform CoinMarketCap in den TOP10 der Native Coins gewählt - gefolgt von Avian, ReddCoin und DogeCash.',
     date: '28. März 2022',
     _id: 2022032801,
   },

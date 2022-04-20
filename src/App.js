@@ -3,7 +3,7 @@ import NavBar from './components/NavBar';
 import DashboardPage from './pages/DashboardPage';
 import ExplanationPage from './pages/ExplanationPage';
 import NewsPage from './pages/NewsPage';
-import BuyingDocPage from './pages/BuyingDocPage';
+import MiningTutPage from './pages/MiningTutPage';
 import { Routes, Route } from 'react-router-dom';
 
 export default function App() {
@@ -15,7 +15,7 @@ export default function App() {
           <Route path="/" element={<DashboardPage />} />
           <Route path="/explanation" element={<ExplanationPage />} />
           <Route path="/news" element={<NewsPage />} />
-          <Route path="/buying-tutorial" element={<BuyingDocPage />} />
+          <Route path="/mining-tutorial" element={<MiningTutPage />} />
         </Routes>
       </Pages>
     </AppContainer>

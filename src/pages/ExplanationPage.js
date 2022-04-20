@@ -17,6 +17,7 @@ export default function ExplanationPage() {
   return (
     <Wrapper>
       <ScrollToTop />
+      <ExplanationTitle>Beschreibung</ExplanationTitle>
       <QuestionList>
         {explanationList.map(({ _id, name }) => {
           return (
@@ -56,6 +57,13 @@ export default function ExplanationPage() {
 const Wrapper = styled.div`
   display: grid;
   margin-top: 50px;
+`;
+
+const ExplanationTitle = styled.h2`
+  font-size: 100%;
+  margin: 0;
+  margin: 30px 0 0 30px;
+  color: #3ac5e8;
 `;
 
 const QuestionList = styled.ul`

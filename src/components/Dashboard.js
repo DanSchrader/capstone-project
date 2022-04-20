@@ -133,7 +133,8 @@ const DashboardTableContainer = styled.section`
   grid-template-columns: 1fr 1fr;
   margin: 0;
   padding: 0;
-  gap: 5px;
+  row-gap: 5px;
+  column-gap: 20px;
   justify-self: center;
 `;
 
