@@ -20,7 +20,7 @@ export default function MinerConfig({ hideTutorialArticle }) {
       />
       <MiningTutorialText
         text={
-          'Auf der Homepage scrollen wir ein bisschen runter, bis wir zur zum Mining-Konfigurator kommen. Die Stratum-Location setzen wir auf "Europe Stratum". Coin belassen wir bei "Raptoreum" und Solo auf "No".'
+          'Auf der Homepage scrollen wir ein bisschen runter, bis wir zum Mining-Konfigurator kommen. Die Stratum-Location setzen wir auf "Europe Stratum". Coin belassen wir bei "Raptoreum" und Solo auf "No".'
         }
       />
       <MiningTutorialText

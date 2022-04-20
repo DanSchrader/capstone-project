@@ -15,7 +15,7 @@ export default function MiningTutorial({
   tutorial,
 }) {
   return (
-    <TutorialArticleList isVisible={showTutorialArticle}>
+    <TutorialArticleList isVisible={showTutorialArticle} role="list">
       {tutorial === 'hint' && (
         <Hint id={'hint'} hideTutorialArticle={hideTutorialArticle} />
       )}
