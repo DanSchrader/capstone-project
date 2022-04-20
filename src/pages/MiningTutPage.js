@@ -19,7 +19,7 @@ export default function MiningTutPage() {
   return (
     <MiningTutWrapper>
       <ScrollToTop />
-      <MiningTutTitle>Mining-Tutorial</MiningTutTitle>
+      <MiningTutTitle>Mining-Anleitung</MiningTutTitle>
       <HeadlineList role="list">
         <HeadlineListItem id={'hints'}>
           <HeadlineButton onClick={() => handleShowTutorialArticle('hint')}>
