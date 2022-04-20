@@ -1,15 +1,15 @@
 import styled from 'styled-components';
-import TextSeparator from '../TextSeparator';
-import MiningTutorialHeadline from '../MiningTutorialHeadline';
-import MiningTutorialText from '../MiningTutorialText';
-import MiningTutorialImage from '../MiningTutorialImage';
+import CloseTutorialButton from './CloseTutorialButton';
+import MiningTutorialHeadline from './MiningTutorialHeadline';
+import MiningTutorialText from './MiningTutorialText';
+import MiningTutorialImage from './MiningTutorialImage';
 import tutorialImage14 from '../../images/xmrig-ghostrider.png';
 import tutorialImage15 from '../../images/xmrig-code.png';
 import tutorialImage16 from '../../images/xmrig-admin.png';
 import tutorialImage17 from '../../images/xmrig-mining.png';
 import tutorialImage18 from '../../images/minafacil-walletenter.png';
 
-export default function MinerSetup() {
+export default function MinerSetup({ hideTutorialArticle }) {
   return (
     <TutorialArticleItem>
       <MiningTutorialHeadline headline={'XMRig - Setup'} />
@@ -19,7 +19,7 @@ export default function MinerSetup() {
       />
       <MiningTutorialText
         text={
-          'Wir gehen nun in unser entzipptes XMRig-Verzeichnis in unserem Mining-Ordner und öffnen die Datei "rtm_ghostrider_example" in einem Text-Editor. Dafür eignet sich jeder normale Text-Editor - auch der Windows-eigene. Wir verwenden für dieses Tutorial "notepad++".'
+          'Wir gehen nun in unser entzipptes XMRig-Verzeichnis in unserem Mining-Ordner und dort öffnen wir die Datei "rtm_ghostrider_example" in einem Text-Editor. Dafür eignet sich jeder normale Text-Editor - auch der Windows-eigene. Wir verwenden für dieses Tutorial "notepad++".'
         }
       />
       <MiningTutorialImage
@@ -28,7 +28,7 @@ export default function MinerSetup() {
       />
       <MiningTutorialText
         text={
-          'Jetzt markieren wir uns in der hervorgehobenen Zeile auf dem Bild alles NACH xmrig.exe AB "-a" BIS EINSCHLIEßLICH "-u". Ist der Text markiert, fügen wir per Strg + V die Code-Zeile aus unserer Zwischenablage ein und speichern die Datei "rtm_ghostrider_example" ab.'
+          'Jetzt markieren wir uns in der hervorgehobenen Zeile auf dem Bild alles nach xmrig.exe ab "-a" bis einschließlich "-u". Ist der Text markiert, fügen wir per Strg + V die Code-Zeile aus unserer Zwischenablage ein und speichern die Datei "rtm_ghostrider_example" ab.'
         }
       />
       <MiningTutorialImage
@@ -68,7 +68,7 @@ export default function MinerSetup() {
           'Dazu geht ihr wieder auf minafacil.com und fügt unter "Wallet" eure Empfangs-Adresse ein, die ihr auch schon in der XMRig-Konfiguration verwendet habt. Fröhliches Minen!'
         }
       />
-      <TextSeparator />
+      <CloseTutorialButton hideTutorialArticle={hideTutorialArticle} />
     </TutorialArticleItem>
   );
 }

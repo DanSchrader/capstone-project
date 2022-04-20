@@ -1,13 +1,13 @@
 import styled from 'styled-components';
-import TextSeparator from '../TextSeparator';
-import MiningTutorialHeadline from '../MiningTutorialHeadline';
-import MiningTutorialText from '../MiningTutorialText';
-import MiningTutorialImage from '../MiningTutorialImage';
+import CloseTutorialButton from './CloseTutorialButton';
+import MiningTutorialHeadline from './MiningTutorialHeadline';
+import MiningTutorialText from './MiningTutorialText';
+import MiningTutorialImage from './MiningTutorialImage';
 import tutorialImage01 from '../../images/windows-security.png';
 import tutorialImage02 from '../../images/windows-exclusions.png';
 import tutorialImage03 from '../../images/windows-excluded-folder.png';
 
-export default function Preparation() {
+export default function Preparation({ hideTutorialArticle }) {
   return (
     <TutorialArticleItem>
       <MiningTutorialHeadline headline={'Windows - Vorbereitung'} />
@@ -43,7 +43,7 @@ export default function Preparation() {
           'Wir klicken auf "Auschluss hinzufügen" und dann "Ordner" und wählen unseren erstellten Mining-Ordner. Ohne diesen Schritt würde Windows bei jedem Sicherheits-Scan den Mining-Ordner als Bedrohung erkennen.'
         }
       />
-      <TextSeparator />
+      <CloseTutorialButton hideTutorialArticle={hideTutorialArticle} />
     </TutorialArticleItem>
   );
 }

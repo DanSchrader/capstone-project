@@ -1,11 +1,11 @@
 import styled from 'styled-components';
-import TextSeparator from '../TextSeparator';
-import MiningTutorialHeadline from '../MiningTutorialHeadline';
-import MiningTutorialText from '../MiningTutorialText';
-import MiningTutorialImage from '../MiningTutorialImage';
-import tutorialImage13 from '../../images/rtm-wallet-download.png';
+import CloseTutorialButton from './CloseTutorialButton';
+import MiningTutorialHeadline from './MiningTutorialHeadline';
+import MiningTutorialText from './MiningTutorialText';
+import MiningTutorialImage from './MiningTutorialImage';
+import tutorialImage13 from '../../images/minafacil-config.png';
 
-export default function MinerConfig() {
+export default function MinerConfig({ hideTutorialArticle }) {
   return (
     <TutorialArticleItem>
       <MiningTutorialHeadline headline={'Minafacil - Konfiguration'} />
@@ -33,7 +33,7 @@ export default function MinerConfig() {
           'Wir bestätigen mit "Start Mining". Jetzt startet aber noch kein Miner, sondern wir bekommen drei Code-Zeilen aktualisiert. Uns interessiert der Inhalt der Zeile "Main Pool", den wir uns in die Zwischenablage kopieren.'
         }
       />
-      <TextSeparator />
+      <CloseTutorialButton hideTutorialArticle={hideTutorialArticle} />
     </TutorialArticleItem>
   );
 }

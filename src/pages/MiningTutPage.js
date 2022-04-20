@@ -1,13 +1,19 @@
 import { useState } from 'react';
 import styled from 'styled-components';
 import ScrollToTop from '../utils/ScrollToTop';
-import MiningTutorial from '../components/MiningTutorial';
+import MiningTutorial from '../components/miningtutorial/MiningTutorial';
 
 export default function MiningTutPage() {
   const [showTutorialArticle, setShowTutorialArticle] = useState(false);
+  const [tutorial, setTutorial] = useState(null);
 
-  const handleShowTutorialArticle = () => {
+  const handleShowTutorialArticle = (page) => {
     setShowTutorialArticle(!showTutorialArticle);
+    setTutorial(page);
+  };
+
+  const handleHideTutorialArticle = () => {
+    setShowTutorialArticle(false);
   };
 
   return (
@@ -16,36 +22,70 @@ export default function MiningTutPage() {
       <MiningTutTitle>Mining-Tutorial</MiningTutTitle>
       <HeadlineList>
         <HeadlineListItem id={'hints'}>
-          <HeadlineButton onClick={handleShowTutorialArticle}>
+          <HeadlineButton onClick={() => handleShowTutorialArticle('hint')}>
             Hinweise vorab
           </HeadlineButton>
         </HeadlineListItem>
         <HeadlineListItem id={'tecspecs'}>
-          <HeadlineButton>Technische Anforderungen</HeadlineButton>
+          <HeadlineButton onClick={() => handleShowTutorialArticle('tecspecs')}>
+            Technische Anforderungen
+          </HeadlineButton>
         </HeadlineListItem>
         <HeadlineListItem id={'preparation'}>
-          <HeadlineButton>Windows - Vorbereitung</HeadlineButton>
+          <HeadlineButton
+            onClick={() => handleShowTutorialArticle('preparation')}
+          >
+            Windows - Vorbereitung
+          </HeadlineButton>
         </HeadlineListItem>
         <HeadlineListItem id={'walletdownload'}>
-          <HeadlineButton>Die Wallet - Download</HeadlineButton>
+          <HeadlineButton
+            onClick={() => handleShowTutorialArticle('walletdownload')}
+          >
+            Die Wallet - Download
+          </HeadlineButton>
         </HeadlineListItem>
         <HeadlineListItem id={'walletinstallation'}>
-          <HeadlineButton>Die Wallet - Installation</HeadlineButton>
+          <HeadlineButton
+            onClick={() => handleShowTutorialArticle('walletinstallation')}
+          >
+            Die Wallet - Installation
+          </HeadlineButton>
         </HeadlineListItem>
         <HeadlineListItem id={'minerdownload'}>
-          <HeadlineButton>XMRig - Miner-Download</HeadlineButton>
+          <HeadlineButton
+            onClick={() => handleShowTutorialArticle('minerdownload')}
+          >
+            XMRig - Miner-Download
+          </HeadlineButton>
         </HeadlineListItem>
         <HeadlineListItem id={'miningpools'}>
-          <HeadlineButton>Raptoreum - Mining-Pools</HeadlineButton>
+          <HeadlineButton
+            onClick={() => handleShowTutorialArticle('miningpools')}
+          >
+            Raptoreum - Mining-Pools
+          </HeadlineButton>
         </HeadlineListItem>
         <HeadlineListItem id={'minerconfig'}>
-          <HeadlineButton>Minafacil - Konfiguration</HeadlineButton>
+          <HeadlineButton
+            onClick={() => handleShowTutorialArticle('minerconfig')}
+          >
+            Minafacil - Konfiguration
+          </HeadlineButton>
         </HeadlineListItem>
         <HeadlineListItem id={'minersetup'}>
-          <HeadlineButton>XMRig - Setup</HeadlineButton>
+          <HeadlineButton
+            onClick={() => handleShowTutorialArticle('minersetup')}
+          >
+            XMRig - Setup
+          </HeadlineButton>
         </HeadlineListItem>
       </HeadlineList>
-      <MiningTutorial />
+      <MiningTutorial
+        tutorial={tutorial}
+        showTutorialArticle={showTutorialArticle}
+        hideTutorialArticle={handleHideTutorialArticle}
+      />
     </MiningTutWrapper>
   );
 }

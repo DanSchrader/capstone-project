@@ -9,7 +9,6 @@ export default function NewsArticle({ text }) {
 }
 
 const NewsArticleWrapper = styled.article`
-  padding: 0 15px;
   margin: 0 28px;
   margin-top: 10px;
   border-bottom: solid 1px #565656;

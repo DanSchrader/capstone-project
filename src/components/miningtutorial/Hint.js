@@ -1,9 +1,9 @@
 import styled from 'styled-components';
-import TextSeparator from '../TextSeparator';
-import MiningTutorialHeadline from '../MiningTutorialHeadline';
-import MiningTutorialText from '../MiningTutorialText';
+import CloseTutorialButton from './CloseTutorialButton';
+import MiningTutorialHeadline from './MiningTutorialHeadline';
+import MiningTutorialText from './MiningTutorialText';
 
-export default function Hints() {
+export default function Hint({ hideTutorialArticle }) {
   return (
     <TutorialArticleItem id={'hints'}>
       <MiningTutorialHeadline headline={'Hinweise vorab'} />
@@ -22,7 +22,7 @@ export default function Hints() {
           'Minen sollte zur Zeit nur, wer an die Zukunft des Coins glaubt, den er minen möchte. Aufgrund der Ethereum-Umstellung auf PoS, kann CPU-Mining jedoch durchaus profitabel werden. Es ist eine Frage der eigenen Einschätzung und jedermanns eigenes Risiko.'
         }
       />
-      <TextSeparator />
+      <CloseTutorialButton hideTutorialArticle={hideTutorialArticle} />
     </TutorialArticleItem>
   );
 }
@@ -30,4 +30,5 @@ export default function Hints() {
 const TutorialArticleItem = styled.li`
   display: grid;
   position: absolute;
+  background: #121212;
 `;

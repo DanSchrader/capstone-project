@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import logo from '../images/raptoreum-logo.svg';
+import logo from '../../images/raptoreum-logo.svg';
 
 export default function MiningTutorialHeadline({ headline }) {
   return (
@@ -16,7 +16,7 @@ const HeadlineWrapper = styled.div`
   display: grid;
   grid-template-columns: 30px 1fr;
   gap: 10px;
-  margin: 15px 0 0 30px;
+  margin: 15px 0 0 43px;
 `;
 
 const RaptoreumLogoContainer = styled.div`

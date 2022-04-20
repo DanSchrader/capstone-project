@@ -1,9 +1,9 @@
 import styled from 'styled-components';
-import TextSeparator from '../TextSeparator';
-import MiningTutorialHeadline from '../MiningTutorialHeadline';
-import MiningTutorialText from '../MiningTutorialText';
+import CloseTutorialButton from './CloseTutorialButton';
+import MiningTutorialHeadline from './MiningTutorialHeadline';
+import MiningTutorialText from './MiningTutorialText';
 
-export default function TecSpecs() {
+export default function TecSpecs({ hideTutorialArticle }) {
   return (
     <TutorialArticleItem>
       <MiningTutorialHeadline headline={'Technische Anforderungen'} />
@@ -25,7 +25,7 @@ export default function TecSpecs() {
           'Mit modernen Intel-CPUs kann man natürlich auch minen, allerdings ist dort das Preis-CPU-Core-Verhältnis suboptimal und CPU-Mining profitiert stark von Multi-Core-CPUs - je mehr Kerne, desto besser.'
         }
       />
-      <TextSeparator />
+      <CloseTutorialButton hideTutorialArticle={hideTutorialArticle} />
     </TutorialArticleItem>
   );
 }

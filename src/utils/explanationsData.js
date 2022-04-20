@@ -48,7 +48,7 @@ const explanations = [
     question: 'Ist Kryptowährung gefährlich?',
     answer: {
       p1: 'Nein. Kryptowährung ist eine Innovation. Irgendwann war es den Menschen mit zunehmender Verfügbarkeit zu kompliziert, Waren gegen Waren zu tauschen. Sie erfanden das Geld, dem ein bestimmter Wert zugeordnet wird, auf den man sich geeinigt hat.',
-      p2: 'Genau so - nur fast 2700 Jahre später - verhält es sich mit Kryptowährungen. Sie sind der Versuch einer Lösung zunehmender Problematik des Echtgelds und seinen weltweiten Transaktionen.',
+      p2: 'Genau so - nur fast 2700 Jahre später - verhält es sich mit Kryptowährungen. Sie sind der Versuch einer Lösung zunehmender Problematik des regulären Geldes und seinen weltweiten Transaktionen.',
     },
   },
   {
@@ -57,7 +57,7 @@ const explanations = [
     question: 'Aber... aber... Darknet?',
     answer: {
       p1: 'Kryptowährungen werden teilweise missbraucht, um anonyme, illegale Geschäfte im Internet - oft verallgemeinert im Darknet - zu tätigen. Etwa so wie das Bargeld des Dollars, Euros, Renminbis oder des Rubels auf der Straße, um Drogen, Waffen und Menschen zu handeln, nur machen illegale Kryptogeschäfte einen Bruchteil der illegalen Echtgeldgeschäfte aus, was auch daran liegt, dass die Zahlungsmöglichekeiten mit Kryptowährungen noch sehr eingeschränkt sind.',
-      p2: 'Kleiner Ausflug: Wer im Jahr 2010 25.000 Bitcoin für zwei Gramm Koks aus dem Darknet ausgegeben hat, hat sich zum Stand heute Koks für über eine Milliarde Dollar in die Gesundheit gepfiffen. Eine goldene Nase ist nichts dagegen.',
+      p2: 'Kleiner Ausflug: Hätte jemand im Jahr 2010 25.000 Bitcoin (damals etwa 200 Dollar) für zwei Gramm Koks aus dem Darknet ausgegeben, hätte er sich zum heutigen Stand Koks für etwa eine Milliarde Dollar in die Gesundheit gepfiffen. Eine goldene Nase ist nichts dagegen.',
     },
   },
   {
@@ -70,6 +70,15 @@ const explanations = [
       p3: 'Kryptotransktionen dauern nur Minuten, haben niedrige Gebühren und sind viel sicherer. Dabei sind sie auch transparenter, weil jeder jederzeit alle Krypto-Transaktionen in einer Art öffentlichen Kassenbuch der jeweiligen Währung nachprüfen kann.',
       p4: 'Zudem kann man die Verschlüsselungs- und Speicherfunktionen der Krypto-Blockchains für viele zusätzliche Einsatzzwecke nutzen:',
       p5: 'Datensicherung und Datenschutz sensibler Daten, Automatisierung und Beschleunigung von Sachbearbeitungsprozessen, Lebensmittel können in der Produktionskette zum Ursprungsort zurück verfolgt werden, digitale Wahlen können weltweit umgesetzt werden und die Verwaltung und das Ausstellen von Zertifikaten (Zeugnisse, Besitzurkunden, Eintrittskarten - alle diese Vorteile und viele mehr bietet die Technologie hinter Kryptowährungen. Schnell, transparent und fälschungssicher!',
+    },
+  },
+  {
+    name: 'Ersetzen Kryptowährungen Geld?',
+    _id: 'replacement',
+    question: 'Ersetzen Kryptowährungen Geld?',
+    answer: {
+      p1: 'Nein und das sollen sie auch nicht. Wünschenswert wäre eine vernünftige Ko-Existenz. Kryptowährungen müssten zuallererst reglementiert werden. Das bedeutet, die Maximalmenge einer bestimmten Kryptowährung müsste weltweit gesetzlich reglementiert sein. Bisher geben nur die veränderbaren Algorithmen vor, wieviele Coins einer Währung existieren dürfen, sonst könnten die Entwickler der Kryptowährung nachträglich die Maximalmenge erhören, was zu einer Inflation führt.',
+      p2: 'Wäre die Maximalmenge der Kryptowährungen reglementiert, könnten sie ohne Bedenken vergleichbar mit Aktien gehandelt werden. Man würde sich als Besitzer von Kryptowährung an der dazu gehörigen Plattform und ihren Dienstleistungen beteiligen, wie ein Aktionär am Unternehmen, dessen Aktien er besitzt. Darüber hinaus besteht natürlich die Möglichkeit, das Kryptowährungen auch als direktes Zahlungsmittel eingesetzt werden können.',
     },
   },
 ];

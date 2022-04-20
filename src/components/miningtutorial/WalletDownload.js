@@ -1,13 +1,13 @@
 import styled from 'styled-components';
-import TextSeparator from '../TextSeparator';
-import MiningTutorialHeadline from '../MiningTutorialHeadline';
-import MiningTutorialText from '../MiningTutorialText';
-import MiningTutorialImage from '../MiningTutorialImage';
+import CloseTutorialButton from './CloseTutorialButton';
+import MiningTutorialHeadline from './MiningTutorialHeadline';
+import MiningTutorialText from './MiningTutorialText';
+import MiningTutorialImage from './MiningTutorialImage';
 import tutorialImage04 from '../../images/rtm-wallet-download.png';
 import tutorialImage05 from '../../images/rtm-wallet-download-2.png';
 import tutorialImage06 from '../../images/rtm-wallet-download-3.png';
 
-export default function WalletDownload() {
+export default function WalletDownload({ hideTutorialArticle }) {
   return (
     <TutorialArticleItem>
       <MiningTutorialHeadline headline={'Die Wallet - Download'} />
@@ -22,8 +22,12 @@ export default function WalletDownload() {
       />
       <MiningTutorialText
         text={
-          'In diesem Tutorial verwenden wir die hauseigene Raptoreum-Wallet. Dazu besuchen wir die Website raptoreum.com und wählen in der Navigationsleiste unter Downloads "Wallet".'
+          'In diesem Tutorial verwenden wir die hauseigene Raptoreum-Wallet. Dazu besuchen wir die Website'
         }
+      />
+      <StyledLink href="http://www.raptoreum.com">raptoreum.com</StyledLink>
+      <MiningTutorialText
+        text={'und wählen in der Navigationsleiste unter Downloads "Wallet".'}
       />
       <MiningTutorialImage
         src={tutorialImage05}
@@ -31,14 +35,14 @@ export default function WalletDownload() {
       />
       <MiningTutorialText
         text={
-          'Wir werden auf GitHub weitergeleitet und laden die Datei "raptoreum_versionsnummer_windows_64_setup.exe"\nherunter.'
+          'Wir werden auf GitHub weitergeleitet und laden die Datei "raptoreum_versionsnummer_windows_64_setup.exe" herunter.'
         }
       />
       <MiningTutorialImage
         src={tutorialImage06}
         alt={'Dokumentationsbild: Wallet-Download'}
       />
-      <TextSeparator />
+      <CloseTutorialButton hideTutorialArticle={hideTutorialArticle} />
     </TutorialArticleItem>
   );
 }
@@ -46,4 +50,13 @@ export default function WalletDownload() {
 const TutorialArticleItem = styled.li`
   display: grid;
   position: absolute;
+`;
+
+const StyledLink = styled.a`
+  text-decoration: none;
+  color: #dcdcdc;
+  font-size: 90%;
+  margin: 0 43px;
+  margin-top: 20px;
+  border-bottom: solid 1px #3ac5e8;
 `;
