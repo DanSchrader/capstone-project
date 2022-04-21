@@ -4,6 +4,8 @@ import HistoryChart from './HistoryChart';
 import styled from 'styled-components';
 import formatChartData from '../utils/formatChartData';
 import logo from '../images/raptoreum-logo.svg';
+import LoadingCircle from './LoadingCircle';
+import LoadingPlaceholder from './LoadingPlaceholder';
 
 export default function Dashboard() {
   const [currentData, setCurrentData] = useState();
@@ -60,7 +62,7 @@ export default function Dashboard() {
       {historyData ? (
         <HistoryChart historyData={historyData} />
       ) : (
-        <div>Data is</div>
+        <LoadingCircle />
       )}
       {currentData ? (
         <DashboardTableContainer>
@@ -76,7 +78,7 @@ export default function Dashboard() {
           <TableValue>{currentData.market_data.max_supply} RTM</TableValue>
         </DashboardTableContainer>
       ) : (
-        <div>loading...</div>
+        <LoadingPlaceholder />
       )}
     </SectionDashboard>
   );
