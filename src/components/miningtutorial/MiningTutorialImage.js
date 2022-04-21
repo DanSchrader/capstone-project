@@ -15,5 +15,9 @@ const ImageContainer = styled.div`
 `;
 
 const TutorialImage = styled.img`
-  max-width: 275px;
+  width: 50vw;
+
+  @media screen and (max-width: 960px) {
+    width: 290px;
+  }
 `;

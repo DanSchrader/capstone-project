@@ -48,8 +48,11 @@ const TutorialArticleItem = styled.li`
 const StyledLink = styled.a`
   text-decoration: none;
   color: #dcdcdc;
+  margin-top: 15px;
+  border-bottom: solid 1px #3ac5e8;
+
+  @media screen and (max-width: 960px) {
   font-size: 90%;
   margin: 0 43px;
-  margin-top: 20px;
-  border-bottom: solid 1px #3ac5e8;
+  }
 `;

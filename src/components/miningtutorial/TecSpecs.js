@@ -42,6 +42,9 @@ const TechSpecList = styled.ul`
 `;
 
 const TechSpecListItem = styled.li`
+  @media screen and (max-width: 960px) {
   font-size: 90%;
   font-weight: 300;
+  line-height: 120%;
+  }
 `;

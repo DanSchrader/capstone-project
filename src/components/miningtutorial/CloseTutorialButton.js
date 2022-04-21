@@ -16,7 +16,13 @@ const CloseButton = styled.button`
   color: white;
   font-size: 150%;
   position: absolute;
-  right: 25px;
-  top: -30px;
+  right: -15px;
+  top: -35px;
+ 
   cursor: pointer;
+
+  @media screen and (max-width: 960px) {
+  right: 25px;
+  top: -43px;
+  }
 `;

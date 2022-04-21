@@ -89,9 +89,12 @@ const SectionDashboard = styled.section`
 `;
 
 const DashboardTitle = styled.h2`
-  font-size: 100%;
   margin: 30px 0 0 30px;
   color: #3ac5e8;
+
+  @media screen and (max-width: 960px) {
+    font-size: 100%;
+  }
 `;
 
 const DashboardLegend = styled.div`
@@ -117,11 +120,15 @@ const LegendLogo = styled.img`
 `;
 
 const LegendHeadline = styled.h3`
-  font-size: 100%;
   font-weight: 500;
   margin: 0;
   padding: 0;
-  margin-top: 5px;
+  
+
+  @media screen and (max-width: 960px) {
+    font-size: 100%;
+    margin-top: 5px;
+  }
 `;
 
 const DashboardTableContainer = styled.section`
@@ -143,14 +150,21 @@ const DashboardTableContainer = styled.section`
 const TableIndicator = styled.span`
   margin: 0;
   padding: 0;
-  font-size: 80%;
-  font-weight: 300;
+  
+@media screen and (max-width: 960px) {
+    font-size: 80%;
+    font-weight: 300;
+  }
 `;
 
 const TableValue = styled.span`
   color: #3ac5e8;
   margin: 0;
   padding: 0;
-  font-size: 80%;
+  
+
+  @media screen and (max-width: 960px) {
+    font-size: 80%;
   font-weight: 200;
+  }
 `;

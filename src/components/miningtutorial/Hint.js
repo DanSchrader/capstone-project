@@ -9,7 +9,7 @@ export default function Hint({ hideTutorialArticle }) {
       <MiningTutorialHeadline headline={'Hinweise vorab'} />
       <MiningTutorialText
         text={
-          'Transparenterweise sei erstmal erwähnt, dass Raptoreum-Mining - wie auch das Mining der meisten anderen Coins - in Deutschland aktuell NICHT profitabel ist.'
+          'Transparenterweise sei erstmal erwähnt, dass Raptoreum-Mining - wie auch das Mining der meisten anderen Coins - in Deutschland aktuell nicht profitabel ist.'
         }
       />
       <MiningTutorialText

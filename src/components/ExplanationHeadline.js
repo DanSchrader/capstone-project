@@ -10,11 +10,17 @@ export default function ExplanationHeadline({ headline }) {
 
 const HeadlineWrapper = styled.div`
   display: grid;
-  padding: 0 50px;
+  
+  @media screen and (max-width: 960px) {
+    padding: 0 50px;
+  }
 `;
 
 const Headline = styled.h4`
-  font-size: 80%;
   padding-bottom: 10px;
   border-bottom: solid 1px #454545;
+
+  @media screen and (max-width: 960px) {
+    font-size: 80%;
+  }
 `;

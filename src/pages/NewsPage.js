@@ -13,4 +13,9 @@ export default function NewsPage() {
 
 const Wrapper = styled.div`
   display: grid;
+  width: 50vw;
+
+  @media screen and (max-width: 960px) {
+    width: 100%;
+  }
 `;

@@ -55,6 +55,7 @@ export default function NavBar() {
 
 const NavBarHeader = styled.header`
   width: 100vw;
+  max-width: 1200px;
   padding: 0 20px;
 `;
 
@@ -107,6 +108,8 @@ const RaptoreumDecryptdedContainer = styled.div`
   display: grid;
   align-items: center;
   cursor: pointer;
+  
+  left: 0;
 
   @media screen and (max-width: 960px) {
     position: absolute;
@@ -117,10 +120,15 @@ const RaptoreumDecryptdedContainer = styled.div`
 `;
 
 const RaptoreumDecryptedText = styled.h1`
-  margin: 0;
+  margin-top: 2px;
   padding: 0;
-  font-size: 110%;
-  font-weight: 700;
+  font-size: 140%;
+  
+  @media screen and (max-width: 960px) {
+    font-size: 110%;
+    font-weight: 700;
+    margin: 0;
+  }
 `;
 
 const NavList = styled.ul`
@@ -191,8 +199,12 @@ const LinkButton = styled.button`
   background: transparent;
   border: none;
   color: #dcdcdc;
-  font-size: 80%;
+  
   cursor: pointer;
+
+  @media screen and (max-width: 960px) {
+    font-size: 80%;
+  }
 `;
 
 const MenuIconContainer = styled.div`
