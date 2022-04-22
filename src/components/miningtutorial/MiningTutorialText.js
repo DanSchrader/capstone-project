@@ -9,15 +9,21 @@ export default function MiningTutorialText({ text }) {
 }
 
 const TextWrapper = styled.div`
-  padding: 0 15px;
-  margin: 0 28px;
-  margin-top: 20px;
+@media screen and (max-width: 960px) {
+    padding: 0 15px;
+    margin: 0 28px;
+  }
 `;
 
 const TutorialText = styled.p`
-  font-size: 90%;
-  font-weight: 300;
   text-align: justify;
   hyphens: auto;
-  margin: 0;
+  margin: 20px 0 0 0;
+  line-height: 130%;
+
+  @media screen and (max-width: 960px) {
+  font-size: 90%;
+  font-weight: 300;
+  line-height: 120%;
+  }
 `;

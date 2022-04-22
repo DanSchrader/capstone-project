@@ -37,8 +37,13 @@ export default function HistoryChart({ historyData }) {
 }
 
 const ChartWrapper = styled.div`
-  width: 80vw;
+  width: 50vw;
+  max-width: 1200px;
   position: relative;
   justify-self: center;
   margin: 15px 0;
+
+  @media screen and (max-width: 960px) {
+    width: 80vw;
+  }
 `;

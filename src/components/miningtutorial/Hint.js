@@ -9,7 +9,7 @@ export default function Hint({ hideTutorialArticle }) {
       <MiningTutorialHeadline headline={'Hinweise vorab'} />
       <MiningTutorialText
         text={
-          'Transparenterweise sei erstmal erwähnt, dass Raptoreum-Mining - wie auch das Mining der meisten anderen Coins - in Deutschland aktuell NICHT profitabel ist.'
+          'Transparenterweise sei erstmal erwähnt, dass Raptoreum-Mining - wie auch das Mining der meisten anderen Coins - in Deutschland aktuell nicht profitabel ist.'
         }
       />
       <MiningTutorialText
@@ -19,7 +19,7 @@ export default function Hint({ hideTutorialArticle }) {
       />
       <MiningTutorialText
         text={
-          'Minen sollte zur Zeit nur, wer an die Zukunft des Coins glaubt, den er minen möchte. Aufgrund der Ethereum-Umstellung auf PoS, kann CPU-Mining jedoch durchaus profitabel werden. Es ist eine Frage der eigenen Einschätzung und jedermanns eigenes Risiko.'
+          'Minen sollte zur Zeit nur, wer an die Zukunft des Coins glaubt, den er minen möchte. Aufgrund der geplanten Umstellung Ethereums auf Proof-of-Stake, kann CPU-Mining jedoch durchaus profitabel werden. Es ist eine Frage der eigenen Einschätzung und jedermanns eigenes Risiko.'
         }
       />
       <CloseTutorialButton hideTutorialArticle={hideTutorialArticle} />
@@ -31,4 +31,10 @@ const TutorialArticleItem = styled.li`
   display: grid;
   position: absolute;
   padding-bottom: 20px;
+  width: 50vw;
+  justify-self: center;
+
+  @media screen and (max-width: 960px) {
+    width: 100%;
+  }
 `;

@@ -43,14 +43,24 @@ const TutorialArticleItem = styled.li`
   display: grid;
   position: absolute;
   padding-bottom: 20px;
+  width: 50vw;
+  justify-self: center;
+
+  @media screen and (max-width: 960px) {
+    width: 100%;
+  }
 `;
 
 const StyledLink = styled.a`
   text-decoration: none;
   color: #dcdcdc;
-  font-size: 90%;
   margin: 0 43px;
   margin-top: 20px;
   border-bottom: solid 1px #3ac5e8;
   cursor: pointer;
+
+  @media screen and (max-width: 960px) {
+    font-size: 90%;
+    font-weight: 300;
+  }
 `;

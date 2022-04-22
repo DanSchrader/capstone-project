@@ -52,4 +52,10 @@ const TutorialArticleItem = styled.li`
   display: grid;
   position: absolute;
   padding-bottom: 20px;
+  width: 50vw;
+  justify-self: center;
+
+  @media screen and (max-width: 960px) {
+    width: 100%;
+  }
 `;

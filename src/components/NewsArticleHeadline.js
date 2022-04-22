@@ -42,16 +42,24 @@ const NewsArticleLogo = styled.img`
 
 const NewsArticleHeadline = styled.h3`
   grid-area: headline;
-  font-size: 90%;
   font-weight: 500;
   margin: 0;
   padding: 0;
+
+  @media screen and (max-width: 960px) {
+    font-size: 90%;
+  }
 `;
 
 const NewsArticleDate = styled.span`
   grid-area: date;
-  font-size: 80%;
-  font-weight: 300;
   padding-left: 13px;
   color: #3ac5e8;
+  margin-top: 5px;
+
+  @media screen and (max-width: 960px) {
+  font-size: 80%;
+  font-weight: 300;
+  margin-top: 0;
+  }
 `;

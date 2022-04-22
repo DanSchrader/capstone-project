@@ -23,8 +23,15 @@ export default function App() {
 }
 
 const AppContainer = styled.div`
-  width: 100vw;
+  display: grid;
   padding: 10px;
+  max-width: 1200px;
+  width: 50%;
+  justify-self: center;
+
+  @media screen and (max-width: 960px) {
+    width: 100%;
+  }
 `;
 
 const Pages = styled.main`

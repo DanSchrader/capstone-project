@@ -26,14 +26,22 @@ export default function NewsSection() {
 
 const NewsWrapper = styled.section`
   display: grid;
-  margin-top: 50px;
+
+  @media screen and (max-width: 960px) {
+    margin-top: 50px;
+  }
+  
 `;
 
 const NewsTitle = styled.h2`
-  font-size: 100%;
+  
   margin: 0;
   margin: 30px 0 0 30px;
   color: #3ac5e8;
+
+  @media screen and (max-width: 960px) {
+    font-size: 100%;
+  }
 `;
 
 const NewsArticleList = styled.ul`

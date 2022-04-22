@@ -16,7 +16,11 @@ const HeadlineWrapper = styled.div`
   display: grid;
   grid-template-columns: 30px 1fr;
   gap: 10px;
-  margin: 15px 0 0 43px;
+  margin: 20px 0 0 0;
+
+  @media screen and (max-width: 960px) {
+    margin: 15px 0 0 43px;
+  }
 `;
 
 const RaptoreumLogoContainer = styled.div`
@@ -35,9 +39,13 @@ const RaptoreumLogo = styled.img`
 `;
 
 const TutorialHeadline = styled.h3`
-  font-size: 100%;
-  font-weight: 500;
   margin: 0;
   padding: 0;
+  margin-top: 2px;
+
+  @media screen and (max-width: 960px) {
+  font-size: 100%;
+  font-weight: 500;
   margin-top: 5px;
+  }
 `;

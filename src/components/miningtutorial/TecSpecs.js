@@ -33,6 +33,13 @@ export default function TecSpecs({ hideTutorialArticle }) {
 const TutorialArticleItem = styled.li`
   display: grid;
   position: absolute;
+  padding-bottom: 20px;
+  width: 50vw;
+  justify-self: center;
+
+  @media screen and (max-width: 960px) {
+    width: 100%;
+  }
 `;
 
 const TechSpecList = styled.ul`
@@ -42,6 +49,9 @@ const TechSpecList = styled.ul`
 `;
 
 const TechSpecListItem = styled.li`
+  @media screen and (max-width: 960px) {
   font-size: 90%;
   font-weight: 300;
+  line-height: 120%;
+  }
 `;

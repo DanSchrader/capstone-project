@@ -23,25 +23,33 @@ const NewsWrapper = styled.section`
 `;
 
 const NewsTitle = styled.h2`
-  font-size: 100%;
+  
   margin: 0;
   margin: 30px 0 0 30px;
   color: #3ac5e8;
+
+  @media screen and (max-width: 960px) {
+    font-size: 100%;
+  }
 `;
 
 const NewsLink = styled(NavLink)`
   display: grid;
   text-decoration: none;
   height: 48px;
-  width: 100px;
+  width: 150px;
   justify-self: center;
+  margin-top: 10px;
 `;
 
 const NewsButton = styled.button`
   background: transparent;
   border: none;
   color: #dcdcdc;
-  font-size: 80%;
   cursor: pointer;
   border-bottom: 1px solid #565656;
+
+  @media screen and (max-width: 960px) {
+    font-size: 80%;
+  }
 `;

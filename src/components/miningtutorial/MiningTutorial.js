@@ -69,27 +69,34 @@ export default function MiningTutorial({
 }
 
 const TutorialArticleList = styled.ul`
-  list-style: none;
-  padding: 0;
-  margin: 0;
   display: grid;
+  list-style: none;
+  padding-left: 0;
   position: absolute;
-  top: 120px;
-  height: 100vh;
-  width: 100%;
+  width: 80vw;
+  height: 100%;
   left: -100%;
-  background: #121212;
-  opacity: 0;
+  top: 115px;
   z-index: 1;
+  background: #121212;
   transition: all 0.5s ease;
+  opacity: 1;
+
+  @media screen and (max-width: 960px) {
+  top: 100px;
+  width: 100%;
+  }
 
   ${(props) =>
     props.isVisible &&
     css`
-      left: 0;
-      background: #121212;
+      left: 10vw;
       opacity: 1;
       transition: all 0.5s ease;
       z-index: 1;
+
+      @media screen and (max-width: 960px) {
+      left: 0;
+      }
     `}
 `;

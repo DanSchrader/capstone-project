@@ -14,9 +14,14 @@ const NewsArticleWrapper = styled.article`
 `;
 
 const NewsArticleText = styled.p`
-  font-size: 90%;
-  font-weight: 300;
   text-align: justify;
   hyphens: auto;
   margin: 0;
+  line-height: 130%;
+
+  @media screen and (max-width: 960px) {
+  font-size: 90%;
+  font-weight: 300;
+  line-height: 120%;
+  }
 `;

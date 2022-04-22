@@ -17,16 +17,23 @@ export default function ExplanationText({ text }) {
 
 const TextWrapper = styled.div`
   display: grid;
-  grid-template-rows: auto auto auto auto auto;
-  padding: 0 50px;
+  
   margin: 0;
   text-align: justify;
   hyphens: auto;
   height: fit-content;
+
+  @media screen and (max-width: 960px) {
+    padding: 0 50px;
+  }
 `;
 
 const Text = styled.p`
+  line-height: 130%;
+
+  @media screen and (max-width: 960px) {
   font-size: 80%;
   font-weight: 300;
-  line-height: 130%;
+  line-height: 120%;
+  }
 `;

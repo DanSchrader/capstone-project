@@ -55,46 +55,61 @@ export default function ExplanationPage() {
 }
 
 const ExplanationsWrapper = styled.div`
-  display: grid;
+display: grid;
+justify-self: center;
+  
+@media screen and (max-width: 960px) {
   margin-top: 50px;
+  }
 `;
 
 const ExplanationTitle = styled.h2`
-  font-size: 100%;
-  margin: 0;
-  margin: 30px 0 0 30px;
   color: #3ac5e8;
+
+  @media screen and (max-width: 960px) {
+  font-size: 100%;
+  margin: 30px 0 0 -25px;
+  }
 `;
 
 const QuestionList = styled.ul`
   list-style: none;
   padding-left: 0;
   display: grid;
-  position: relative;
   justify-self: center;
   gap: 20px;
-  width: 100%;
+  width: 50vw;
+  grid-template-columns: 1fr 1fr;
 
   @media screen and (max-width: 960px) {
+    grid-template-columns: 1fr;
+    width: 100%;
   }
 `;
 
 const StyledListItem = styled.li`
   display: grid;
   justify-items: center;
-  position: relative;
 `;
 
 const StyledExplButton = styled.button`
-  background: transparent;
-  border: none;
-  border-bottom: solid 1px #565656;
-  color: #dcdcdc;
-  font-size: 80%;
   cursor: pointer;
-  height: 48px;
-  width: 300px;
-  position: relative;
+  width: 400px;
+  height: 100px;
+  background: transparent;
+  border-radius: 5px;
+  border: none;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+  color: #dcdcdc;
+
+  @media screen and (max-width: 960px) {
+    font-size: 80%;
+    width: 300px;
+    height: 48px;
+    background: transparent;
+    border: none;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+    }
 `;
 
 const AnswerList = styled.ul`
@@ -102,22 +117,31 @@ const AnswerList = styled.ul`
   list-style: none;
   padding-left: 0;
   position: absolute;
-  top: 110px;
-  width: 100%;
+  width: 50vw;
   height: 100%;
   left: -100%;
+  top: 115px;
   z-index: 1;
   background: #121212;
   transition: all 0.5s ease;
   opacity: 1;
 
+  @media screen and (max-width: 960px) {
+  top: 110px;
+  width: 100%;
+  }
+
   ${(props) =>
     props.isShown &&
     css`
-      left: 0;
+      left: 25vw;
       opacity: 1;
       transition: all 0.5s ease;
       z-index: 1;
+
+      @media screen and (max-width: 960px) {
+      left: 0;
+      }
     `}
 `;
 
@@ -142,12 +166,16 @@ const AnswerItem = styled.li`
 
 const CloseExplButton = styled.button`
   position: absolute;
-  right: 35px;
-  top: -30px;
+  right: -10px;
+  top: -52px;
   background: none;
   border: none;
   color: #dcdcdc;
   font-size: 150%;
   height: 48px;
   width: 48px;
+
+  @media screen and (max-width: 960px) {
+    right: 35px;
+  }
 `;
