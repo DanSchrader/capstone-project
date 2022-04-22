@@ -76,7 +76,6 @@ const QuestionList = styled.ul`
   list-style: none;
   padding-left: 0;
   display: grid;
-  position: relative;
   justify-self: center;
   gap: 20px;
   width: 50vw;
@@ -91,12 +90,10 @@ const QuestionList = styled.ul`
 const StyledListItem = styled.li`
   display: grid;
   justify-items: center;
-  position: relative;
 `;
 
 const StyledExplButton = styled.button`
   cursor: pointer;
-  position: relative;
   width: 400px;
   height: 100px;
   background: transparent;
