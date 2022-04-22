@@ -73,7 +73,7 @@ const TutorialArticleList = styled.ul`
   list-style: none;
   padding-left: 0;
   position: absolute;
-  width: 50vw;
+  width: 80vw;
   height: 100%;
   left: -100%;
   top: 115px;
@@ -90,7 +90,7 @@ const TutorialArticleList = styled.ul`
   ${(props) =>
     props.isVisible &&
     css`
-      left: 25vw;
+      left: 10vw;
       opacity: 1;
       transition: all 0.5s ease;
       z-index: 1;
