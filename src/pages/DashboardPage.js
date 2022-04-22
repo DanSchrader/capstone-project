@@ -16,6 +16,7 @@ export default function DashboardPage() {
 const DashboardWrapper = styled.div`
   display: grid;
   width: 50vw;
+  justify-self: center;
 
   @media screen and (max-width: 960px) {
     margin-top: 50px;

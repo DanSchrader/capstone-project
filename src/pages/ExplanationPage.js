@@ -56,6 +56,7 @@ export default function ExplanationPage() {
 
 const ExplanationsWrapper = styled.div`
 display: grid;
+justify-self: center;
   
 @media screen and (max-width: 960px) {
   margin-top: 50px;
@@ -110,8 +111,7 @@ const StyledExplButton = styled.button`
     height: 48px;
     background: transparent;
     border: none;
-    border-bottom: solid 1px #565656;
-    box-shadow: none;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
     }
 `;
 
