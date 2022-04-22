@@ -68,7 +68,7 @@ const ExplanationTitle = styled.h2`
 
   @media screen and (max-width: 960px) {
   font-size: 100%;
-  margin: 30px 0 0 -25px;
+  margin: 30px 0 0 0px;
   }
 `;
 
