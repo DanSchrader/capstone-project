@@ -176,11 +176,11 @@ const NavList = styled.ul`
 
 const LinkConTainer = styled.li`
   display: grid;
-  border-bottom: 1px solid #565656;
+  border-bottom: 1px solid #3ac5e8;
 
   @media screen and (max-width: 960px) {
     width: 40vw;
-    border-bottom: 1px solid #565656;
+    border-bottom: 1px solid #3ac5e8;
   }
 `;
 

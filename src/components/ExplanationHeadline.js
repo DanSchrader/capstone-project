@@ -18,7 +18,7 @@ const HeadlineWrapper = styled.div`
 
 const Headline = styled.h4`
   padding-bottom: 10px;
-  border-bottom: solid 1px #454545;
+  border-bottom: solid 1px #3ac5e8;
 
   @media screen and (max-width: 960px) {
     font-size: 80%;

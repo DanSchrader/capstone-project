@@ -57,14 +57,17 @@ export default function ExplanationPage() {
 const ExplanationsWrapper = styled.div`
 display: grid;
 justify-self: center;
+width: 50vw;
   
 @media screen and (max-width: 960px) {
   margin-top: 50px;
+  width: 100%;
   }
 `;
 
 const ExplanationTitle = styled.h2`
   color: #3ac5e8;
+  margin: 30px 0 0 0;
 
   @media screen and (max-width: 960px) {
   font-size: 100%;
@@ -84,6 +87,7 @@ const QuestionList = styled.ul`
   @media screen and (max-width: 960px) {
     grid-template-columns: 1fr;
     width: 100%;
+    gap: 15px;
   }
 `;
 
@@ -94,13 +98,14 @@ const StyledListItem = styled.li`
 
 const StyledExplButton = styled.button`
   cursor: pointer;
-  width: 400px;
+  width: 25vw;
   height: 100px;
   background: transparent;
   border-radius: 5px;
   border: none;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+  background: #0b4b5b;
   color: #dcdcdc;
+  padding: 0 20px;
 
   @media screen and (max-width: 960px) {
     font-size: 80%;
@@ -108,7 +113,7 @@ const StyledExplButton = styled.button`
     height: 48px;
     background: transparent;
     border: none;
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+    background: #0b4b5b;
     }
 `;
 
