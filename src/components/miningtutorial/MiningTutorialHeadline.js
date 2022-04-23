@@ -17,9 +17,10 @@ const HeadlineWrapper = styled.div`
   grid-template-columns: 30px 1fr;
   gap: 10px;
   margin: 20px 0 0 0;
+  width: 50vw;
 
   @media screen and (max-width: 960px) {
-    margin: 15px 0 0 43px;
+    width: 80vw;
   }
 `;
 

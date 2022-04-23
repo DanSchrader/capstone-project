@@ -3,6 +3,7 @@ import CloseTutorialButton from './CloseTutorialButton';
 import MiningTutorialHeadline from './MiningTutorialHeadline';
 import MiningTutorialText from './MiningTutorialText';
 import MiningTutorialImage from './MiningTutorialImage';
+import MiningTutorialLink from './MiningTutorialLink';
 import tutorialImage04 from '../../images/rtm-wallet-download.png';
 import tutorialImage05 from '../../images/rtm-wallet-download-2.png';
 import tutorialImage06 from '../../images/rtm-wallet-download-3.png';
@@ -25,7 +26,7 @@ export default function WalletDownload({ hideTutorialArticle }) {
           'In diesem Tutorial verwenden wir die hauseigene Raptoreum-Wallet. Dazu besuchen wir die Website'
         }
       />
-      <StyledLink href="http://www.raptoreum.com">raptoreum.com</StyledLink>
+      <MiningTutorialLink link={'http://www.raptoreum.com'} text={'raptoreum.com'} />
       <MiningTutorialText
         text={'und wählen in der Navigationsleiste unter Downloads "Wallet".'}
       />
@@ -53,22 +54,9 @@ const TutorialArticleItem = styled.li`
   padding-bottom: 20px;
   width: 50vw;
   justify-self: center;
+  justify-items: center;
 
   @media screen and (max-width: 960px) {
     width: 100vw;
-  }
-`;
-
-const StyledLink = styled.a`
-  text-decoration: none;
-  color: #dcdcdc;
-  margin: 0 43px;
-  margin-top: 15px;
-  border-bottom: solid 1px #3ac5e8;
-  cursor: pointer;
-
-  @media screen and (max-width: 960px) {
-    font-size: 90%;
-    font-weight: 300;
   }
 `;

@@ -92,11 +92,12 @@ export default function MiningTutPage() {
 
 const MiningTutWrapper = styled.div`
   display: grid;
-  width: 50vw;  
+  width: 50vw;
+  justify-self: center;  
 
   @media screen and (max-width: 960px) {
     margin-top: 50px;
-    width: 100%;
+    width: 100vw;
   }
 `;
 
@@ -106,7 +107,7 @@ const MiningTutTitle = styled.h2`
 
   @media screen and (max-width: 960px) {
     font-size: 100%;
-    margin: 30px 0 0 0px;
+    margin: 30px 43px 0 43px;
   }
 `;
 
@@ -115,7 +116,6 @@ const HeadlineList = styled.ul`
   list-style: none;
   padding: 0;
   margin: 20px 0 0 0;
-  position: relative;
   justify-self: center;
   gap: 20px;
   width: 50vw;
@@ -123,7 +123,9 @@ const HeadlineList = styled.ul`
 
   @media screen and (max-width: 960px) {
     grid-template-columns: 1fr;
-    width: 100%;
+    width: 100vw;
+    gap: 15px;
+    margin: 20px 0 0 0;
   }
 `;
 
@@ -133,25 +135,22 @@ const HeadlineListItem = styled.li`
 `;
 
 const HeadlineButton = styled.button`
-  background: transparent;
   border: none;
-  position: relative;
   color: #dcdcdc;
   border-radius: 5px;
-  background-color: #0b4b5b;
+  background: #0b4b5b;
   cursor: pointer;
-  width: 25vw;
+  width: 24vw;
   height: 100px;
   padding: 0 20px;
   
 
   @media screen and (max-width: 960px) {
     font-size: 80%;
-    width: 300px;
+    width: 75vw;
     height: 48px;
-    background: transparent;
     border: none;
-    background-color: #0b4b5b;
+    background: #0b4b5b;
     font-size: 80%;
     }
 `;

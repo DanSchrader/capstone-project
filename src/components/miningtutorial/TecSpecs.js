@@ -36,6 +36,7 @@ const TutorialArticleItem = styled.li`
   padding-bottom: 20px;
   width: 50vw;
   justify-self: center;
+  justify-items: center;
 
   @media screen and (max-width: 960px) {
     width: 100vw;

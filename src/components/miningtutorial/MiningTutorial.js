@@ -73,24 +73,24 @@ const TutorialArticleList = styled.ul`
   list-style: none;
   padding-left: 0;
   position: absolute;
-  width: 80vw;
+  width: 100vw;
   height: 100%;
-  left: -100%;
+  left: -100vw;
   top: 115px;
   z-index: 1;
   background: #121212;
   transition: all 0.5s ease;
-  opacity: 1;
+  opacity: 0;
 
   @media screen and (max-width: 960px) {
   top: 100px;
-  width: 100%;
+  width: 100vw;
   }
 
   ${(props) =>
     props.isVisible &&
     css`
-      left: 10vw;
+      left: 0;
       opacity: 1;
       transition: all 0.5s ease;
       z-index: 1;

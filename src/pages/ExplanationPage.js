@@ -61,7 +61,7 @@ width: 50vw;
   
 @media screen and (max-width: 960px) {
   margin-top: 50px;
-  width: 100%;
+  width: 100vw;
   }
 `;
 
@@ -71,14 +71,15 @@ const ExplanationTitle = styled.h2`
 
   @media screen and (max-width: 960px) {
   font-size: 100%;
-  margin: 30px 0 0 0px;
+  margin: 30px 43px 0 43px;
   }
 `;
 
 const QuestionList = styled.ul`
+ display: grid;
   list-style: none;
-  padding-left: 0;
-  display: grid;
+  padding: 0;
+  margin: 20px 0 0 0;
   justify-self: center;
   gap: 20px;
   width: 50vw;
@@ -86,8 +87,9 @@ const QuestionList = styled.ul`
 
   @media screen and (max-width: 960px) {
     grid-template-columns: 1fr;
-    width: 100%;
+    width: 100vw;
     gap: 15px;
+    margin: 20px 0 0 0;
   }
 `;
 
@@ -97,23 +99,23 @@ const StyledListItem = styled.li`
 `;
 
 const StyledExplButton = styled.button`
-  cursor: pointer;
-  width: 25vw;
-  height: 100px;
-  background: transparent;
-  border-radius: 5px;
   border: none;
-  background: #0b4b5b;
   color: #dcdcdc;
+  border-radius: 5px;
+  background: #0b4b5b;
+  cursor: pointer;
+  width: 24vw;
+  height: 100px;
   padding: 0 20px;
+  
 
   @media screen and (max-width: 960px) {
     font-size: 80%;
-    width: 300px;
+    width: 75vw;
     height: 48px;
-    background: transparent;
     border: none;
-    background: #0b4b5b;
+    background-color: #0b4b5b;
+    font-size: 80%;
     }
 `;
 
@@ -155,8 +157,8 @@ const AnswerItem = styled.li`
   grid-template-rows: 50px auto;
   position: absolute;
   opacity: 0;
-  width: 100%;
-  left: -100%;
+  width: 50vw;
+  left: -100vw;
   transition: all 0.5s ease;
 
   ${(props) =>

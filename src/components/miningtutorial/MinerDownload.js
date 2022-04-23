@@ -3,6 +3,7 @@ import CloseTutorialButton from './CloseTutorialButton';
 import MiningTutorialHeadline from './MiningTutorialHeadline';
 import MiningTutorialText from './MiningTutorialText';
 import MiningTutorialImage from './MiningTutorialImage';
+import MiningTutorialLink from './MiningTutorialLink';
 import tutorialImage10 from '../../images/xmrig-download.png';
 import tutorialImage11 from '../../images/xmrig-unzipped.png';
 
@@ -17,9 +18,7 @@ export default function MinerDownload({ hideTutorialArticle }) {
       <MiningTutorialText
         text={'Wir besuchen der Einfachheit halber die Seite'}
       />
-      <StyledLink href="http://www.xmrig.com/download">
-        xmrig.com/download
-      </StyledLink>
+      <MiningTutorialLink text={'xmrig.com/download'} link={'http://www.xmrig.com/download'} />
       <MiningTutorialText
         text={
           'und laden uns die aktuelle Version von XMRig für Win64 herunter. Jetzt wird so ziemlich jeder Browser meckern und den Download verhindern wollen. Ein Mining-Programm wird immer als Schadsoftware eingestuft. Wir gestatten den Download manuell und speichern die .zip-Datei ebenfalls in unserem Mining-Ordner ab.'
@@ -45,22 +44,9 @@ const TutorialArticleItem = styled.li`
   padding-bottom: 20px;
   width: 50vw;
   justify-self: center;
+  justify-items: center;
 
   @media screen and (max-width: 960px) {
     width: 100vw;
-  }
-`;
-
-const StyledLink = styled.a`
-  text-decoration: none;
-  color: #dcdcdc;
-  margin: 0 43px;
-  margin-top: 20px;
-  border-bottom: solid 1px #3ac5e8;
-  cursor: pointer;
-
-  @media screen and (max-width: 960px) {
-    font-size: 90%;
-    font-weight: 300;
   }
 `;
