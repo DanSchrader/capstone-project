@@ -18,6 +18,6 @@ const TutorialImage = styled.img`
   width: 50vw;
 
   @media screen and (max-width: 960px) {
-    width: 290px;
+    width: 80vw;
   }
 `;
