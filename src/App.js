@@ -26,8 +26,7 @@ const AppContainer = styled.div`
   display: grid;
   padding: 10px;
   max-width: 1200px;
-  width: 50%;
-  justify-self: center;
+  width: 75%;
 
   @media screen and (max-width: 960px) {
     width: 100%;

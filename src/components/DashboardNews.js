@@ -47,7 +47,7 @@ const NewsButton = styled.button`
   border: none;
   color: #dcdcdc;
   cursor: pointer;
-  border-bottom: 1px solid #565656;
+  border-bottom: 1px solid #3ac5e8;
 
   @media screen and (max-width: 960px) {
     font-size: 80%;
