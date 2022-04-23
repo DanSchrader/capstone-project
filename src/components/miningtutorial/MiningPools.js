@@ -3,6 +3,7 @@ import CloseTutorialButton from './CloseTutorialButton';
 import MiningTutorialHeadline from './MiningTutorialHeadline';
 import MiningTutorialText from './MiningTutorialText';
 import MiningTutorialImage from './MiningTutorialImage';
+import MiningTutorialLink from './MiningTutorialLink';
 import tutorialImage12 from '../../images/miningpoolstats-raptoreum.png';
 
 export default function MiningPools({ hideTutorialArticle }) {
@@ -18,7 +19,7 @@ export default function MiningPools({ hideTutorialArticle }) {
           'Jetzt ist es an der Zeit, uns für einen Mining-Pool zu entscheiden. Auf der Seite'
         }
       />
-      <StyledLink>miningpoolstats.stream/raptoreum</StyledLink>
+      <MiningTutorialLink link={'https://miningpoolstats.stream/raptoreum'} text={'miningpoolstats.stream/raptoreum'} />
       <MiningTutorialText
         text={
           'werden wir fündig. An dieser Stelle sei auch gleich auf eine Problematik bzgl. Raptoreum verwiesen:'
@@ -45,20 +46,9 @@ const TutorialArticleItem = styled.li`
   padding-bottom: 20px;
   width: 50vw;
   justify-self: center;
+  justify-items: center;
 
   @media screen and (max-width: 960px) {
     width: 100vw;
-  }
-`;
-
-const StyledLink = styled.a`
-  text-decoration: none;
-  color: #dcdcdc;
-  margin-top: 15px;
-  border-bottom: solid 1px #3ac5e8;
-
-  @media screen and (max-width: 960px) {
-  font-size: 90%;
-  margin: 0 43px;
   }
 `;

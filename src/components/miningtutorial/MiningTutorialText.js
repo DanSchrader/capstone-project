@@ -9,9 +9,11 @@ export default function MiningTutorialText({ text }) {
 }
 
 const TextWrapper = styled.div`
+display: grid;
+width: 50vw;
+
 @media screen and (max-width: 960px) {
-    padding: 0 15px;
-    margin: 0 28px;
+    width: 80vw;
   }
 `;
 

@@ -20,6 +20,6 @@ const DashboardWrapper = styled.div`
 
   @media screen and (max-width: 960px) {
     margin-top: 50px;
-    width: 100%;
+    width: 100vw;
   }
 `;
