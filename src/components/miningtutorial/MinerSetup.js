@@ -81,6 +81,6 @@ const TutorialArticleItem = styled.li`
   justify-self: center;
 
   @media screen and (max-width: 960px) {
-    width: 100%;
+    width: 100vw;
   }
 `;
