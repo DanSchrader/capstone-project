@@ -36,7 +36,7 @@ export default function WalletDownload({ hideTutorialArticle }) {
       />
       <MiningTutorialText
         text={
-          'Wir werden auf GitHub weitergeleitet und laden die Datei "raptoreum_versionsnummer_windows_64_setup.exe" herunter.'
+          'Wir werden auf GitHub weitergeleitet und laden die windows_64_setup-Datei herunter.'
         }
       />
       <MiningTutorialImage

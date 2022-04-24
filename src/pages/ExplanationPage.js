@@ -126,7 +126,7 @@ const AnswerList = styled.ul`
   position: absolute;
   width: 50vw;
   height: 100%;
-  left: -100%;
+  left: -100vw;
   top: 115px;
   z-index: 1;
   background: #121212;
@@ -135,7 +135,7 @@ const AnswerList = styled.ul`
 
   @media screen and (max-width: 960px) {
   top: 110px;
-  width: 100%;
+  width: 100vw;
   }
 
   ${(props) =>
@@ -160,6 +160,10 @@ const AnswerItem = styled.li`
   width: 50vw;
   left: -100vw;
   transition: all 0.5s ease;
+
+  @media screen and (max-width: 960px) {
+    width: 100vw;
+  }
 
   ${(props) =>
     props.isShown &&
